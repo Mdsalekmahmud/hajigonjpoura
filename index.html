@@ -1,0 +1,1731 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>হাজীগঞ্জ পৌরসভা | Bootstrap 5</title>
+    <!-- Bootstrap 5.3.2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --green: #087443;
+            --green-deep: #075B36;
+            --dark: #18201C;
+            --indigo: #5146C5;
+            --lavender: #F5F2FF;
+            --bg: #FAFAFC;
+            --muted: #69736E;
+            --alert: #D62828;
+            --green-soft: #EAF5EE;
+        }
+
+        * {
+            font-family: 'Hind Siliguri', 'Inter', sans-serif;
+        }
+
+        body {
+            background: var(--bg);
+        }
+
+        /* কাস্টম রং ওভাররাইড */
+        .bg-green-deep {
+            background-color: var(--green-deep) !important;
+        }
+
+        .bg-green-soft {
+            background-color: var(--green-soft);
+        }
+
+        .bg-lavender {
+            background-color: var(--lavender);
+        }
+
+        .text-green-deep {
+            color: var(--green-deep);
+        }
+
+        .text-muted-custom {
+            color: var(--muted);
+        }
+
+        .border-green {
+            border-color: var(--green) !important;
+        }
+
+        .btn-primary-custom {
+            background-color: var(--green);
+            border-color: var(--green);
+            color: #fff;
+        }
+
+        .btn-primary-custom:hover {
+            background-color: var(--green-deep);
+            border-color: var(--green-deep);
+        }
+
+        .btn-outline-custom {
+            border-color: var(--border);
+            color: var(--dark);
+        }
+
+        .btn-outline-custom:hover {
+            border-color: var(--green);
+            color: var(--green-deep);
+            background: transparent;
+        }
+
+        .btn-ghost {
+            background: rgba(255, 255, 255, 0.12);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-ghost:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
+
+        .chip {
+            background: #fff;
+            border: 1px solid #dee2e6;
+            padding: 6px 16px;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #3a453f;
+            transition: 0.15s;
+            text-decoration: none;
+        }
+
+        .chip:hover {
+            border-color: var(--indigo);
+            color: var(--indigo);
+        }
+
+        .emergency-card {
+            background: #fff;
+            border: 1px solid #f0d6d6;
+            border-radius: 14px;
+            padding: 1.25rem;
+            text-align: center;
+            transition: border-color .15s;
+        }
+
+        .emergency-card:hover {
+            border-color: var(--alert);
+        }
+
+        .emergency-card .num {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--alert);
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* ভাষা টগল */
+        [data-en] {
+            display: none;
+        }
+
+        body.lang-en [data-bn] {
+            display: none;
+        }
+
+        body.lang-en [data-en] {
+            display: inline;
+        }
+
+        .lang-switch .btn {
+            font-size: 0.8rem;
+            padding: 2px 8px;
+            border-radius: 30px;
+            color: #EAF3EE;
+            opacity: 0.7;
+            border: none;
+            background: transparent;
+        }
+
+        .lang-switch .btn.active {
+            opacity: 1;
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        /* ড্রপডাউন হোভার – ডেস্কটপে */
+        @media (min-width: 992px) {
+            .dropdown-hover:hover .dropdown-menu {
+                display: block;
+            }
+
+            .dropdown-hover .dropdown-menu {
+                display: none;
+            }
+        }
+
+        /* ছোট স্ক্রিনে কিছু অ্যাডজাস্ট */
+        .navbar-brand img {
+            height: 44px;
+            width: auto;
+        }
+
+        .hero {
+            background: linear-gradient(180deg, var(--lavender) 0%, var(--bg) 78%);
+            padding: 4rem 0 2.5rem;
+        }
+
+        .search-box {
+            background: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(24, 32, 28, 0.08);
+            padding: 8px 8px 8px 20px;
+        }
+
+        .search-box input {
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            padding: 12px 0;
+            background: transparent;
+            width: 100%;
+        }
+
+        .erevenue {
+            background: var(--green-deep);
+            border-radius: 24px;
+            padding: 2.5rem 2rem;
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .erevenue {
+                padding: 2rem 1.25rem;
+            }
+        }
+
+        .footer {
+            background: var(--dark);
+            color: #cfd6d1;
+        }
+
+        .footer a {
+            color: #9aa39d;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .notice-list .list-group-item {
+            border-left: none;
+            border-right: none;
+            border-radius: 0;
+        }
+
+        .notice-list .list-group-item:first-child {
+            border-top: none;
+        }
+
+        .notice-list .list-group-item:last-child {
+            border-bottom: none;
+        }
+
+        .badge-new {
+            background: var(--alert);
+            color: #fff;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 999px;
+            margin-left: 6px;
+        }
+
+        .service-card,
+        .news-card,
+        .project-card,
+        .transparency-link,
+        .civic-card {
+            transition: transform .18s, box-shadow .18s, border-color .18s;
+        }
+
+        .service-card:hover,
+        .news-card:hover,
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(24, 32, 28, 0.08);
+        }
+
+        .transparency-link:hover {
+            border-color: var(--indigo);
+            transform: translateY(-2px);
+        }
+
+        .civic-card:hover {
+            border-color: var(--green);
+        }
+
+        .status-pill {
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 3px 12px;
+            border-radius: 999px;
+            display: inline-block;
+        }
+
+        .status-ongoing {
+            background: #FFF3DC;
+            color: #8a5c10;
+        }
+
+        .status-done {
+            background: var(--green-soft);
+            color: var(--green-deep);
+        }
+
+        .status-planned {
+            background: var(--lavender);
+            color: var(--indigo);
+        }
+
+        .about-map {
+            height: 280px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, var(--green-soft), var(--lavender));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted);
+            border: 1px solid #dee2e6;
+        }
+
+        .bg-soft-gray {
+            background-color: #F1F3F1;
+        }
+
+        .navbar>.container {
+            display: block !important;
+            /* অথবা inline-block */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== UTILITY BAR ===== -->
+    <div class="bg-green-deep text-white py-1" style="font-size:0.8rem;">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center">
+            <div class="d-flex gap-3 flex-wrap">
+                <a href="#" class="text-white-50 text-decoration-none" data-bn>সরকারি তথ্য ও সেবা</a>
+                <a href="#" class="text-white-50 text-decoration-none" data-en>Govt. Info &amp; Services</a>
+                <a href="#emergency" class="text-white-50 text-decoration-none" data-bn>জরুরি যোগাযোগ</a>
+                <a href="#emergency" class="text-white-50 text-decoration-none" data-en>Emergency Contact</a>
+                <a href="#" class="text-white-50 text-decoration-none" data-bn>অ্যাক্সেসিবিলিটি</a>
+                <a href="#" class="text-white-50 text-decoration-none" data-en>Accessibility</a>
+            </div>
+            <div class="lang-switch">
+                <button id="btn-bn" class="btn active" onclick="setLang('bn')">বাংলা</button>
+                <span class="text-white-50">|</span>
+                <button id="btn-en" class="btn" onclick="setLang('en')">English</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MAIN NAVBAR (Bootstrap) ===== -->
+    <nav class="navbar navbar-expand-lg bg-white sticky-top border-bottom" style="z-index:100;">
+        <div class="container">
+            <div class="row" style="border-bottom: 1px solid #000;">
+                <div class="col d-flex align-items-center gap-2">
+                    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                        <img src="{{ asset('storage/logo.jpg') }}" alt="Logo" style="height:44px; width:auto;">
+                        <span class="fw-bold text-dark" data-bn>হাজীগঞ্জ পৌরসভা</span>
+                        <span class="fw-bold text-dark" data-en>Hajiganj Pourashava</span>
+                    </a>
+                </div>
+                <div class="col d-flex justify-content-end align-items-center gap-2">
+                    <ul class="navbar-nav d-none d-lg-flex align-items-center gap-1 gap-lg-2">
+                        <!-- ডান পাশের বাটন -->
+                        <li class="nav-item d-none d-lg-block">
+                            <a class="btn btn-outline-secondary rounded-pill px-3 fw-semibold" href="#"><i
+                                    class="bi bi-person me-1"></i><span data-bn>নাগরিক পোর্টাল</span><span
+                                    data-en>Citizen
+                                    Portal</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-success rounded-pill px-3 fw-semibold" href="#"><i
+                                    class="bi bi-globe2 me-1"></i><span data-bn>অনলাইন সেবা</span><span data-en>Online
+                                    Services</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false">
+                    <i class="bi bi-list fs-2 text-dark"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav align-items-lg-center gap-1 gap-lg-2">
+
+                        <!-- হোম -->
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold" href="#"><i class="bi bi-house-fill me-1"></i><span
+                                    data-bn>হোম</span><span data-en>Home</span></a>
+                        </li>
+
+                        <!-- পৌরসভা তথ্য (ড্রপডাউন) -->
+                        <li class="nav-item dropdown dropdown-hover">
+                            <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-info-circle me-1"></i><span data-bn>পৌরসভা তথ্য</span><span
+                                    data-en>About
+                                    Us</span>
+                            </a>
+                            <ul class="dropdown-menu shadow-sm border-0 rounded-4 py-2">
+                                <li><a class="dropdown-item" href="https://hajigonjpoura.org/unioncouncilinformation"><i
+                                            class="bi bi-clock-history me-2 text-success"></i><span data-bn>পৌরসভার
+                                            সংক্ষিপ্ত বিবরণ</span><span data-en>Brief History</span></a></li>
+                                <li><a class="dropdown-item" href="https://comillaboard.portal.gov.bd/"><i
+                                            class="bi bi-book me-2 text-success"></i><span data-bn>শিক্ষা বিষয়ক
+                                            তথ্য</span><span data-en>Education Info</span></a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#"><i
+                                            class="bi bi-geo-alt me-2 text-success"></i><span data-bn>লোকেশন ও
+                                            আয়তন</span><span data-en>Location &amp; Area</span></a></li>
+                                <li><a class="dropdown-item" href="#"><i
+                                            class="bi bi-diagram-3 me-2 text-success"></i><span data-bn>সাংগঠনিক
+                                            কাঠামো</span><span data-en>Organogram</span></a></li>
+                                <li><a class="dropdown-item" href="#"><i
+                                            class="bi bi-people me-2 text-success"></i><span
+                                            data-bn>কর্মকর্তাবৃন্দ</span><span data-en>Officers</span></a></li>
+                            </ul>
+                        </li>
+
+                        <!-- আবেদন করুন (ড্রপডাউন) -->
+                        <li class="nav-item dropdown dropdown-hover">
+                            <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-pencil-square me-1"></i>
+                                <span data-bn>আবেদন করুন</span>
+                                <span data-en>Apply</span>
+                            </a>
+                            <ul class="dropdown-menu shadow-sm border-0 rounded-4 py-2">
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="https://hajigonjpoura.org/application/eyJpdiI6InIzMmdoY3Y3WXNOSkhYb25IM2loVnc9PSIsInZhbHVlIjoiR1ZPV2FvSGgrSTJ3czRsTUg0Nk84Zz09IiwibWFjIjoiOWJlN2NhYWNlMmIxYTc5YzA0M2M3ZjY5MjBhOTgyNzQzYzQwOTk4NThhNjYxYWEzZmIwNWVjNWEyYTFhZTQxNSJ9">
+                                        <i class="bi bi-person me-2 text-success"></i>
+                                        <span data-bn>নাগরিক আবেদন</span>
+                                        <span data-en>Citizen Application</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="https://hajigonjpoura.org/application/eyJpdiI6InlqTGU4N0ZBbHZwTm1cL3kzdTBDUGtRPT0iLCJ2YWx1ZSI6IkdSOFNhQWgzM1VWK3BPQzA3NlJHUkE9PSIsIm1hYyI6IjgxYzU2Yjg0NDUzMmVlNDgzNGRlZGIyZDdiNmM5ZjAyMzM1YjNjMzVkZjdlZGY0ZjAzNzk2YzQwZWM0YTU2NWQifQ==">
+                                        <i class="bi bi-award me-2 text-success"></i>
+                                        <span data-bn>ট্রেড লাইসেন্স আবেদন</span>
+                                        <span data-en>Trade License Application</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="https://hajigonjpoura.org/application/eyJpdiI6IldDZU9BZWlkdHlVZTJJZ1kzaTBCZmc9PSIsInZhbHVlIjoiTEExOEJKSzBkN1N1SG1DS3p2dWlsdz09IiwibWFjIjoiYWE3NDU5ZDZlOGY1ZDM0MmM4NjNlN2I0YjgzODhhYWM5NGY5ZmI4ZGQ5YjJlNzkwZWI2NzZhOTU1NDdhMjAxZiJ9">
+                                        <i class="bi bi-people-fill me-2 text-success"></i>
+                                        <span data-bn>ওয়ারিশসনদের আবেদন</span>
+                                        <span data-en>Heir Certificate Application</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="https://hajigonjpoura.org/application/eyJpdiI6ImY5eFdYTHZibEpteVFPbTNvQXFGbkE9PSIsInZhbHVlIjoiXC95bDRlQjZicFBlUG1lYW81eEZnVXc9PSIsIm1hYyI6IjI1NDNlMjBjNTNiZWE1NDQ5NTZiMzJhMmYyMGEzOWIyNzJlOWI5NzRhOWRkYjljNDhkYmRkYjc0ZTQxZTgxZjgifQ==">
+                                        <i class="bi bi-house me-2 text-success"></i>
+                                        <span data-bn>প্রিমিসেস লাইসেন্স আবেদন</span>
+                                        <span data-en>Premises License Application</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="https://hajigonjpoura.org/application/eyJpdiI6InlRcUM2b1lVVmZFOGhXZ25YWjB5dWc9PSIsInZhbHVlIjoibXdPTnZXM0pjV1lTT3NvVGhzNWVQUT09IiwibWFjIjoiZjIyMmE0OTEzOWVmZmJiNzVlOTk1ZDY4YzNiOGUyOGY0NmU2MzM1YmYxNzM1YzY4ZDk3ZTdkMTM3Zjc5OTgzMiJ9">
+                                        <i class="bi bi-file-earmark-text me-2 text-success"></i>
+                                        <span data-bn>পারিবারিক সনদের আবেদন</span>
+                                        <span data-en>Family Certificate Application</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- অন্যান্য আবেদন (ড্রপডাউন) -->
+                        <li class="nav-item dropdown dropdown-hover">
+                            <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-files me-1"></i>
+                                <span data-bn>অন্যান্য আবেদন</span>
+                                <span data-en>Other Applications</span>
+                            </a>
+                            <ul class="dropdown-menu shadow-sm border-0 rounded-4 py-2" style="min-width: 320px;">
+                                <!-- সনদ সংক্রান্ত আবেদন -->
+                                <li>
+                                    <h6 class="dropdown-header fw-bold text-success" data-bn>📄 সনদ সংক্রান্ত আবেদন
+                                    </h6>
+                                    <h6 class="dropdown-header fw-bold text-success" data-en>📄 Certificate
+                                        Applications</h6>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="https://hajigonjpoura.org/application/eyJpdiI6InZwTXkzbUdQRXRBa1VLMmdVRkE5RVE9PSIsInZhbHVlIjoiMTNWaHhDcDd0OWdvYkpqYnpzUkxIZz09IiwibWFjIjoiZGMwMTE4YmU2NGRmM2E4MDMzMjBmMzk0NjQxYTk5NGViMGE4NTExYTU3NmQ1MTRiZTUwNGY1ZmU2NzRmYTQzYyJ9">
+                                        <i class="bi bi-file-earmark-check me-2 text-success"></i>
+                                        <span data-bn>চারিত্রিক সনদের আবেদন</span>
+                                        <span data-en>Character Certificate Application</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="https://hajigonjpoura.org/application/eyJpdiI6ImJNdk5Bb01ERk5zYlRsVlplK3ZBamc9PSIsInZhbHVlIjoiMVpzS1Irc3JEeEVTNUd2VTNUdVNGZz09IiwibWFjIjoiNWFiMjFlZWU4M2FjNTc2NTRjZTMyMGRjNjBhZjY4Njg5YjIyM2U5MWU1MmU3ZjZhY2E0MDIzN2I3NWI1OTE1YSJ9">
+                                        <i class="bi bi-person-standing me-2 text-success"></i>
+                                        <span data-bn>অবিবাহিত সনদের আবেদন</span>
+                                        <span data-en>Unmarried Certificate Application</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="https://hajigonjpoura.org/application/eyJpdiI6InZFVEw2dERGRmdzbm40UGp5NjloWGc9PSIsInZhbHVlIjoiREUyRU5zc1VhQXNYQTVjMW10UlwvNEE9PSIsIm1hYyI6IjU5YWI5Y2Y3Mzc3M2EzYWNjODY0NGRmMmJiMzVhMjhhZDg5MzI5ZDM5NzEyMzFmYjhhYjQzYjk4YWU2MzVkNDYifQ==">
+                                        <i class="bi bi-person-hearts me-2 text-success"></i>
+                                        <span data-bn>বিবাহিত সনদের আবেদন</span>
+                                        <span data-en>Married Certificate Application</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="https://hajigonjpoura.org/application/eyJpdiI6IjJ6aFwvOGNmXC9YRFNVT29IZEdlY09XUT09IiwidmFsdWUiOiJ0cEZsWm85WHVOMVBiRVN4dEhyMVFBPT0iLCJtYWMiOiJlMTgwZjNhMWNhZTM3MDVhMDY5MDAxNTViYTg3ZTVkODE1MDBjMDY4MWJiYmUzNWUyMjQxZDJkNDQ3NDliNDQxIn0=">
+                                        <i class="bi bi-heart-pulse me-2 text-success"></i>
+                                        <span data-bn>মৃত্যু সনদের আবেদন</span>
+                                        <span data-en>Death Certificate Application</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="https://hajigonjpoura.org/application/eyJpdiI6Imp0UjhoaEFpTEFNd1l2c2oyR2NZRlE9PSIsInZhbHVlIjoiaWpJb2NOYUlZRkljZzRtTmp5RWx0UT09IiwibWFjIjoiNjlmNmU0MTdkMjMxMTI1YTNjYWE2YzVmMDA1M2JlYzBlY2U4NjM2YWI1YTU4NDg2YjIzMDAyOGExMDU4NGE4OSJ9">
+                                        <i class="bi bi-house-x me-2 text-success"></i>
+                                        <span data-bn>ভূমিহিন সনদের আবেদন</span>
+                                        <span data-en>Landless Certificate Application</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="https://hajigonjpoura.org/application/eyJpdiI6IlozY0JZQU96YWF0Nm5NVVdwT0JHaGc9PSIsInZhbHVlIjoiRjF6c0JBOTB1M1JFVnhSRXVGMG9BUT09IiwibWFjIjoiY2MyZGJmZGYwOWM2ZjQwYmYxZTE1ZDEyZWU3NDlkZDg1NzA1YTMxN2RiOTY2OTE4MTgwMmNiNDI3NWY5ZmQwNyJ9">
+                                        <i class="bi bi-arrow-repeat me-2 text-success"></i>
+                                        <span data-bn>পুনঃ বিবাহ না হওয়া সনদের আবেদন</span>
+                                        <span data-en>Non-remarriage Certificate Application</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+
+                                <!-- প্রত্যয়ন ও অনুমতি সংক্রান্ত -->
+                                <li>
+                                    <h6 class="dropdown-header fw-bold text-success" data-bn>🔐 প্রত্যয়ন ও অনুমতি
+                                        সংক্রান্ত</h6>
+                                    <h6 class="dropdown-header fw-bold text-success" data-en>🔐 Certification &amp;
+                                        Permission</h6>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="https://hajigonjpoura.org/application/eyJpdiI6Imc5T1pPalhLYTBJUzl6OVA4dVRKXC9BPT0iLCJ2YWx1ZSI6ImtuXC9xMlFBT2d4ZU9FVFQ5cGlcL0MrZz09IiwibWFjIjoiODU4M2NhMTM1MTdlYWViOGE2ZTFkNDU4MzA4YzJmZGViOWNlZmIwNDBkNzIzYTdlZDBiY2YxYjU5MjkzZDIxZCJ9">
+                                        <i class="bi bi-person-vcard me-2 text-success"></i>
+                                        <span data-bn>ভোটার আইডি স্থানান্তর সনদের আবেদন</span>
+                                        <span data-en>Voter ID Transfer Certificate Application</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="https://hajigonjpoura.org/application/eyJpdiI6Imx5NWxUdEdMamQzZEREWW5seFk3T2c9PSIsInZhbHVlIjoiQitGUFpvZlU1VG0rYWlQbm5kK1RiUT09IiwibWFjIjoiYzg4ODRmN2VjYTI3ZGJhZWQ3ZTQ5NDQ1NWU0NDZiYmQ3ZTlhZmQ4MGY1ZTQyYWNkNDY0ZTU4M2U1MzQ5NjQ4YSJ9">
+                                        <i class="bi bi-water me-2 text-success"></i>
+                                        <span data-bn>নদী ভাঙন সনদের আবেদন</span>
+                                        <span data-en>River Erosion Certificate Application</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="https://hajigonjpoura.org/application/eyJpdiI6IjdiSlRVdWV6MGsrTlZMTHZsOStaUlE9PSIsInZhbHVlIjoiWHhhQXJ4UzJRV3o3dUk2czd2RmFCQT09IiwibWFjIjoiOGQ0ZTkzYmIzMjI5YzZmNjYxMjNkMTY0NzE2M2FiMDJiZWE1MmQ5M2FjNmM5OTRjZjZmNjAzZmM5NDljNjQxNCJ9">
+                                        <i class="bi bi-file-check me-2 text-success"></i>
+                                        <span data-bn>অনাপত্তি পত্র আবেদন</span>
+                                        <span data-en>No-Objection Certificate Application</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="https://hajigonjpoura.org/application/eyJpdiI6IlIxaW1JTHRCeWFhQU9LbWhlcUJiOGc9PSIsInZhbHVlIjoicWZDeVUrcXcyRGdCaGRCcVY3ZHV5dz09IiwibWFjIjoiYzc1MTFmZDczMGMxODBiYjAyMDRhZjQ2YmQyNDM0YmQ1NTE1M2QwNDExNTIyODQ1ZTM0OTRkNTY5M2M0NWI2OSJ9">
+                                        <i class="bi bi-person-arms-up me-2 text-success"></i>
+                                        <span data-bn>একই নামের প্রত্যয়ন আবেদন</span>
+                                        <span data-en>Same Name Certification Application</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="https://hajigonjpoura.org/application/eyJpdiI6IjJoeXJwWmx1M01tWkRoMjZHQzhDTVE9PSIsInZhbHVlIjoiWUhGYzRUQ2xcL0NPaU1QTGtlVU5BY2c9PSIsIm1hYyI6IjU1ZmU2OGNhZmY0Yjg2Yzg2M2MyMzQ1OTZmNjZjOWNjYjExYzkzODc1N2M2MzFhMmY5MTBhMWQyOGNiYmFiNjcifQ==">
+                                        <i class="bi bi-file-earmark-lock me-2 text-success"></i>
+                                        <span data-bn>অনুমতি পত্রের আবেদন</span>
+                                        <span data-en>Permission Letter Application</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="https://hajigonjpoura.org/application/eyJpdiI6IlFJTVRzYnhGNGl4K0RYeGFyVWozNWc9PSIsInZhbHVlIjoiNGpYMnJUOE12VDYwVkV4QkdZbzFmQT09IiwibWFjIjoiOWExMjBlZmE4M2I1OTYzN2RkZjA5Y2ZiYTUxNTg1NjBiYTBiYzBkODgwNmQ0ZWRlODA3NjZlNmM1YmEwNTg2YSJ9">
+                                        <i class="bi bi-cash-stack me-2 text-success"></i>
+                                        <span data-bn>বার্ষিক আয়ের প্রত্যয়ন আবেদন</span>
+                                        <span data-en>Annual Income Certification Application</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+
+                                <!-- বিবিধ আবেদন -->
+                                <li>
+                                    <h6 class="dropdown-header fw-bold text-success" data-bn>📌 বিবিধ আবেদন</h6>
+                                    <h6 class="dropdown-header fw-bold text-success" data-en>📌 Miscellaneous
+                                        Applications</h6>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="https://hajigonjpoura.org/application/eyJpdiI6IkJHVFdmTmRTT3lPM1lPbTl3aTZqTVE9PSIsInZhbHVlIjoiU1BhSllSSmRraTZvSUF6dWRQWUdFUT09IiwibWFjIjoiZWI1MTM0ODZhN2FjNWQ4MjEwN2UzYzI2NGFiODk2YWEzYjBhZTczZmRjZmExMmE2NzdkNzY5MWFmZGQzMmIwNSJ9">
+                                        <i class="bi bi-ear me-2 text-success"></i>
+                                        <span data-bn>প্রকৃত বাকঁ ও শ্রবন প্রতিবন্ধী আবেদন</span>
+                                        <span data-en>Speech &amp; Hearing Disability Application</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="https://hajigonjpoura.org/application/eyJpdiI6IjhlSk9zYWtKXC9ORjFLQjhWUlF4Q1JBPT0iLCJ2YWx1ZSI6IkF0R1VsVUw3Um1mK0FvOUEwVGppaHc9PSIsIm1hYyI6IjNhODQ5MDFiZTljZGI1NjU1MzE5MjRlZDE2MzY4MDU0YmRjY2VhMjY1NDM2MDBiYmE0MjMxMWY1ODExYTkzNjYifQ==">
+                                        <i class="bi bi-star-of-life me-2 text-success"></i>
+                                        <span data-bn>সনাতন ধর্ম অবলম্বী সনদের আবেদন</span>
+                                        <span data-en>Hindu Religious Certificate Application</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="https://hajigonjpoura.org/application/eyJpdiI6InozTGdRK3h0b3dGK2lcLzhRQmQyUzlRPT0iLCJ2YWx1ZSI6InBPVEoxWjBRNWRmZ29Ba1FySUhvOXc9PSIsIm1hYyI6Ijg0MjdlMzg0Y2ExMDU0NDAxNTQxYWM1Zjg0ODBkYzdkNzIzMzIxNTdmOGJlN2U3YjE5ZGIyOGIyZmU5OWQ0MWQifQ==">
+                                        <i class="bi bi-file-earmark-richtext me-2 text-success"></i>
+                                        <span data-bn>প্রত্যয়ন পত্র আবেদন</span>
+                                        <span data-en>Certification Letter Application</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="https://hajigonjpoura.org/application/eyJpdiI6Im1rSzZqazE2WjczWCtDM2w2WkI5eWc9PSIsInZhbHVlIjoiWVV1UVwvbVZMaDlyRzJabU5tZWJKY1E9PSIsIm1hYyI6ImIyYzY4NDZkNzIyOGZjNzE1ZjBhNGEzMmZkNDA1ODc0OTE0ZTZhMWM0NjZkMTlkZGVmYWM1MzZkMDBiNTZmZWMifQ==">
+                                        <i class="bi bi-tools me-2 text-success"></i>
+                                        <span data-bn>রাস্তা খননের অনুমতির আবেদন</span>
+                                        <span data-en>Road Excavation Permission Application</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="https://hajigonjpoura.org/application/eyJpdiI6Ikpqc1VCOFNkVG96VWhxc1Q0WUE2YWc9PSIsInZhbHVlIjoiRVBieHp1S1Z0NnBVY2MzaGtQZm1kdz09IiwibWFjIjoiZjc4NmRkMzk2M2U2YmVjMTUxZmUwZmQwMGE0ZTVlMzg1YjdkYThlNjhmMTVhYWQ2YTk5MmNiMTA2YTgzMTE0YSJ9">
+                                        <i class="bi bi-paw me-2 text-success"></i>
+                                        <span data-bn>পোষা প্রাণীর লাইসেন্সের আবেদন</span>
+                                        <span data-en>Pet License Application</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="https://hajigonjpoura.org/application/eyJpdiI6ImxaNFZzSmRuaGVMOG1aRGR4ZlV3cWc9PSIsInZhbHVlIjoiVnpQc2VveDZFcU42TFwvVzJaZkxUYlE9PSIsIm1hYyI6ImUzM2UxZGFlMDRjNDIwNGZmM2Q3MDcwOTg3OTMyNzcxYWU1ODEyNGE1N2E5OWIzOTI4NjRmZmY2NWRjNmFmYzEifQ==">
+                                        <i class="bi bi-coin me-2 text-success"></i>
+                                        <span data-bn>আর্থিক অসচ্ছলতার সনদ আবেদন</span>
+                                        <span data-en>Financial Insolvency Certificate Application</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+
+                                <!-- হোল্ডিং সংক্রান্ত -->
+                                <li>
+                                    <h6 class="dropdown-header fw-bold text-success" data-bn>🏠 হোল্ডিং সংক্রান্ত</h6>
+                                    <h6 class="dropdown-header fw-bold text-success" data-en>🏠 Holding Related</h6>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="https://hajigonjpoura.org/application/eyJpdiI6Ik1DXC9CZm1GNEZienZqR1k1aTVOQnNBPT0iLCJ2YWx1ZSI6IjFFaU1maVNCbVwvbWtDTE8wQWxHb293PT0iLCJtYWMiOiJiNjkxNGVmNDIzZWQyODUzYTcxNjkzOWIxNjk3N2Y1YjFmMTYyZTc4YTM0YjFmMzZmZmE3NzJjMTA0ODFlNDQwIn0=">
+                                        <i class="bi bi-building-add me-2 text-success"></i>
+                                        <span data-bn>নতুন হোল্ডিং আবেদন</span>
+                                        <span data-en>New Holding Application</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="https://hajigonjpoura.org/application/eyJpdiI6Im9sdzR1RVAwbWM0WURPK3M4S05wWmc9PSIsInZhbHVlIjoiS3RcL3JvOUU4NkFPZjF2Vko5bk1QUFE9PSIsIm1hYyI6ImZhOWVlNzhiMzI0NjRhY2QzMzQ1NThjYjA5ODBmODBjMzBhM2U0MjJiYjgwNjE3MTEzODU2ZmE2Y2ZhOTM1MTIifQ==">
+                                        <i class="bi bi-pencil-square me-2 text-success"></i>
+                                        <span data-bn>হোল্ডিং নামজারির আবেদন</span>
+                                        <span data-en>Holding Name Transfer Application</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="https://hajigonjpoura.org/application/eyJpdiI6Ik0xXC83ZkllRUJGNU1RazZBZm5aWFJRPT0iLCJ2YWx1ZSI6Ilg5TVFFcTRUN0dPeW1tM2tSTnhBXC9RPT0iLCJtYWMiOiJhZWE4MzJkMzMzYTkxMWU3OTQ3Y2ZhMDAyZWJmNDQ5ZGUzY2ZmMGFkYzNhZWQyMDY5YTcyZDkzZTM2MWVjMjk2In0=">
+                                        <i class="bi bi-building me-2 text-success"></i>
+                                        <span data-bn>ইমারত নির্মাণ আবেদন</span>
+                                        <span data-en>Building Construction Application</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="https://hajigonjpoura.org/application/eyJpdiI6IkpaY1JMeXJsYnkxT1hkeTRqOFBuc3c9PSIsInZhbHVlIjoiendLVWtGdDZ4MkxBZDRwVzZYalF1Zz09IiwibWFjIjoiMmM1ZjhlYmRlYWEzOTBiZWFhMzIzZDYyNzg1MjM0MzY2N2RhODkwMWJiYjE5ZjJlNTExYmNiMDM1M2UyOWY2ZiJ9">
+                                        <i class="bi bi-map me-2 text-success"></i>
+                                        <span data-bn>ভূমি ব্যবহার ছাড়পত্রের আবেদন</span>
+                                        <span data-en>Land Use Clearance Application</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- উন্নয়নমূলক প্রকল্প (ড্রপডাউন) -->
+                        <li class="nav-item dropdown dropdown-hover">
+                            <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-graph-up-arrow me-1"></i>
+                                <span data-bn>উন্নয়নমূলক প্রকল্প</span>
+                                <span data-en>Development Projects</span>
+                            </a>
+                            <ul class="dropdown-menu shadow-sm border-0 rounded-4 py-2" style="min-width: 480px;">
+                                <div class="row g-0">
+                                    <!-- প্রথম কলাম: অবকাঠামো ও জ্বালানি -->
+                                    <div class="col-md-6 border-right">
+                                        <li style="border-bottom: 1px solid black;">
+                                            <h6 class="dropdown-header fw-bold text-success" data-bn>🏗️ অবকাঠামো ও
+                                                জ্বালানি</h6>
+                                            <h6 class="dropdown-header fw-bold text-success" data-en>🏗️ Infrastructure
+                                                &amp; Energy</h6>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="bi bi-droplet me-2 text-success"></i>
+                                                <span data-bn>বিশুদ্ধ পানি ও জল প্রকল্প</span>
+                                                <span data-en>Clean Water &amp; Water Project</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="bi bi-flower1 me-2 text-success"></i>
+                                                <span data-bn>বায়োগ্যাস প্রকল্প</span>
+                                                <span data-en>Biogas Project</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="bi bi-brightness-high me-2 text-success"></i>
+                                                <span data-bn>সৌর বিদ্যুৎ প্রকল্প</span>
+                                                <span data-en>Solar Power Project</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="bi bi-water me-2 text-success"></i>
+                                                <span data-bn>আধুনিক পয়ঃনিষ্কাশন প্রকল্প</span>
+                                                <span data-en>Modern Sewerage Project</span>
+                                            </a>
+                                        </li>
+                                    </div>
+
+                                    <!-- দ্বিতীয় কলাম: নিরাপত্তা ও পরিবেশ -->
+                                    <div class="col-md-6">
+                                        <li style="border-bottom: 1px solid black;">
+                                            <h6 class="dropdown-header fw-bold text-success" data-bn>🛡️ নিরাপত্তা ও
+                                                পরিবেশ</h6>
+                                            <h6 class="dropdown-header fw-bold text-success" data-en>🛡️ Safety &amp;
+                                                Environment</h6>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="bi bi-fire me-2 text-success"></i>
+                                                <span data-bn>ফায়ার হাইড্রেন্ট প্রকল্প</span>
+                                                <span data-en>Fire Hydrant Project</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="bi bi-recycle me-2 text-success"></i>
+                                                <span data-bn>বর্জ্য ব্যবস্থাপনা প্রকল্প</span>
+                                                <span data-en>Waste Management Project</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="bi bi-ethernet me-2 text-success"></i>
+                                                <span data-bn>ভূগর্ভস্থ বিদ্যুৎ ও ইন্টারনেট কেবল প্রকল্প</span>
+                                                <span data-en>Underground Power &amp; Internet Cable Project</span>
+                                            </a>
+                                        </li>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+
+                        <!-- পেশাজীবী সমিতি (ড্রপডাউন) -->
+                        <li class="nav-item dropdown dropdown-hover">
+                            <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-person-badge me-1"></i>
+                                <span data-bn>পেশাজীবী সমিতি</span>
+                                <span data-en>Professional Associations</span>
+                            </a>
+                            <ul class="dropdown-menu shadow-sm border-0 rounded-4 py-2" style="min-width: 350px;">
+                                <li>
+                                    <a class="dropdown-item" href="{{route('form')}}">
+                                        <i class="bi bi-fish me-2 text-success"></i>
+                                        <span data-bn>মৎস্যজীবী সমবায় সমিতি সদস্য পদের জন্য আবেদন</span>
+                                        <span data-en>Fishermen Cooperative Association Membership Application</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="bi bi-tree me-2 text-success"></i>
+                                        <span data-bn>কৃষিজীবী সমবায় সমিতি সদস্য পদের জন্য আবেদন</span>
+                                        <span data-en>Farmers Cooperative Association Membership Application</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="bi bi-shop me-2 text-success"></i>
+                                        <span data-bn>বাজার ব্যবস্থাপনা সমিতি সদস্য পদের জন্য আবেদন</span>
+                                        <span data-en>Market Management Association Membership Application</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="bi bi-gear me-2 text-success"></i>
+                                        <span data-bn>শিল্পকারখানা সমবায় সমিতি সদস্য পদের জন্য আবেদন</span>
+                                        <span data-en>Industrial Cooperative Association Membership Application</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="bi bi-piggy-bank me-2 text-success"></i>
+                                        <span data-bn>পশুপালক ও খামারি সমিতি সমবায় সমিতি সদস্য পদের জন্য আবেদন</span>
+                                        <span data-en>Livestock &amp; Farmers Cooperative Association Membership
+                                            Application</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- দুর্ঘটনার তথ্যাদি (সরাসরি লিংক) -->
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold" href="#">
+                                <i class="bi bi-exclamation-triangle me-1"></i>
+                                <span data-bn>দুর্ঘটনার তথ্যাদি</span>
+                                <span data-en>Accident Information</span>
+                            </a>
+                        </li>
+                        <!-- সালিশ কার্যক্রমের তথ্যাদি (সরাসরি লিংক) -->
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold" href="#">
+                                <i class="bi bi-scale me-1"></i>
+                                <span data-bn>সালিশ কার্যক্রমের তথ্যাদি</span>
+                                <span data-en>Arbitration Information</span>
+                            </a>
+                        </li>
+
+                        <!-- যাচাই করুন (সরাসরি লিংক) -->
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold" href="https://hajigonjpoura.org/verify">
+                                <i class="bi bi-check-circle me-1"></i>
+                                <span data-bn>যাচাই করুন</span>
+                                <span data-en>Verify</span>
+                            </a>
+                        </li>
+                        <!-- অন্যান্য লিংক -->
+                        {{-- <li class="nav-item"><a class="nav-link fw-semibold" href="#notices"><i
+                                    class="bi bi-megaphone-fill me-1"></i><span data-bn>নোটিশ ও বিজ্ঞপ্তি</span><span
+                                    data-en>Notices</span></a></li>
+                        <li class="nav-item"><a class="nav-link fw-semibold" href="#projects"><i
+                                    class="bi bi-graph-up me-1"></i><span data-bn>প্রকল্প ও বাজেট</span><span
+                                    data-en>Projects &amp; Budget</span></a></li>
+                        <li class="nav-item"><a class="nav-link fw-semibold" href="#transparency"><i
+                                    class="bi bi-file-earmark-text me-1"></i><span data-bn>তথ্য অধিকার</span><span
+                                    data-en>RTI</span></a></li>
+                        <li class="nav-item"><a class="nav-link fw-semibold" href="#complaint"><i
+                                    class="bi bi-chat-dots me-1"></i><span data-bn>অভিযোগ ও পরামর্শ</span><span
+                                    data-en>Complaints</span></a></li>
+                        <li class="nav-item"><a class="nav-link fw-semibold" href="#contact"><i
+                                    class="bi bi-telephone-fill me-1"></i><span data-bn>যোগাযোগ</span><span
+                                    data-en>Contact</span></a></li> --}}
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+<section class="hero position-relative overflow-hidden" style="min-height: 100vh;">
+    <div id="heroSlider" class="carousel slide position-absolute top-0 start-0 w-100 h-100" data-bs-ride="carousel" data-bs-interval="4000">
+        <div class="carousel-inner h-100">
+            <div class="carousel-item h-100 active" style="background: url({{ asset('storage/slider_1_Hajigonj_big_mosque.jpg') }}) center/cover no-repeat;"></div>
+            <div class="carousel-item h-100" style="background: url({{ asset('storage/slider_2.jpg') }}) center/cover no-repeat;"></div>
+            <div class="carousel-item h-100" style="background: url({{ asset('storage/slider_3.jpg') }}) center/cover no-repeat;"></div>
+        </div>
+    </div>
+    <div class="position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,0,0,0.5); z-index: 1;"></div>
+
+    <div class="container position-relative h-100 d-flex align-items-center justify-content-center" style="z-index: 2; min-height: 100vh;">
+        <div class="text-center text-white">
+            <span class="badge bg-green-soft text-green-deep rounded-pill px-3 py-2 mb-3">
+                <span class="dot bg-success d-inline-block rounded-circle me-1" style="width:8px;height:8px;"></span>
+                <span data-bn>নাগরিক-কেন্দ্রিক ডিজিটাল সেবা</span><span data-en>Citizen-first digital services</span>
+            </span>
+            <h1 class="display-4 fw-bold" data-bn>হাজীগঞ্জ পৌরসভা<br>নাগরিক সেবা এখন আরও সহজ</h1>
+            <h1 class="display-4 fw-bold" data-en>Hajiganj Poura Municipality<br>Making civic services simpler</h1>
+            <p class="lead mt-3 mx-auto" style="max-width:600px;" data-bn>পৌরসভার বিভিন্ন নাগরিক সেবা, তথ্য, আবেদন, নোটিশ ও অনলাইন সুবিধা এখন এক জায়গায়।</p>
+            <p class="lead mt-3 mx-auto" style="max-width:600px;" data-en>Access DNCC services, information, applications, notices and online facilities from one place.</p>
+
+            <div class="search-block mx-auto" style="max-width:680px;">
+                <div class="search-box d-flex align-items-center bg-white rounded-pill p-1 shadow">
+                    <i class="bi bi-search text-muted fs-5 ms-3"></i>
+                    <input type="text" class="flex-grow-1 border-0 py-2 px-3" id="hero-search" data-bn
+                        placeholder="সেবা, তথ্য বা বিষয় লিখে অনুসন্ধান করুন...">
+                    <input type="text" class="flex-grow-1 border-0 py-2 px-3" id="hero-search-en" data-en
+                        placeholder="Search for a service, topic or information...">
+                    <button class="btn btn-primary-custom rounded-pill px-4"><span data-bn>খুঁজুন</span><span
+                            data-en>Search</span></button>
+                </div>
+                <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+                    <span class="text-white fw-semibold" data-bn>জনপ্রিয়:</span><span class="text-white fw-semibold"
+                        data-en>Popular:</span>
+                    <a class="chip text-dark" data-bn>হোল্ডিং ট্যাক্স</a><a class="chip text-dark" data-en>Holding Tax</a>
+                    <a class="chip text-dark" data-bn>ট্রেড লাইসেন্স</a><a class="chip text-dark" data-en>Trade License</a>
+                    <a class="chip text-dark" data-bn>জন্ম নিবন্ধন</a><a class="chip text-dark" data-en>Birth Registration</a>
+                    <a class="chip text-dark" data-bn>অভিযোগ</a><a class="chip text-dark" data-en>Complaints</a>
+                    <a class="chip text-dark" data-bn>বর্জ্য ব্যবস্থাপনা</a><a class="chip text-dark" data-en>Waste Management</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div data-widget_type="widget" data-widget_name="BlockWidget" data-widget_content_type="blocks"
+                        data-widget_item="6922d3dfdbfbab28ce042797" class="widget block-widget">
+                        <div class="block-widget-container" style="display: flex">
+                            <div
+                                style="float: left; background-color: red; color:white; margin:5px; padding:2px; font-size: x-large;}">
+                                স্বাগতম</div>
+                            <div class="block-widget-content">
+                                {{-- <rt-renderer encoded-content="PG1hcnF1ZWUgZGlyZWN0aW9uPSJsZWZ0IiBzY3JvbGxhbW91bnQ9IjciICJ0aGlzLnN0b3AoKSIgInRoaXMuc3RhcnQoKSI+PHA+PHNwYW4gc3R5bGU9ImNvbG9yOnJnYigwLCAwLCAwKSI+Kirgpqzgpr/gpqbgp43gpq/gpq7gpr7gpqgg4Kah4KeH4KaZ4KeN4KaX4KeBIOCmquCmsOCmv+CmuOCnjeCmpeCmv+CmpOCmv+CmpOCnh8Kg4Kah4KeH4KaZ4KeN4KaX4KeBIOCmuOCmguCmleCnjeCmsOCmvuCmqOCnjeCmpCDgpqrgprDgpr7gpq7gprDgp43gprYg4KaTIOCmquCmsOCngOCmleCnjeCmt+CmvuCmsCDgppzgpqjgp43gpq8g4Kah4Ka/4KaP4Kao4Ka44Ka/4Ka44Ka/4oCZ4KawIOCmleCmqOCnjeCmn+CnjeCmsOCni+CmsiDgprDgp4Hgpq7gp4cg4Kav4KeL4KaX4Ka+4Kav4KeL4KaX4KeH4KawIOCmnOCmqOCnjeCmryDgpoXgpqjgp4HgprDgp4vgpqcg4KaV4Kaw4Ka+IOCmueCmsuCni+ClpMKg4KaV4Kao4KeN4Kaf4KeN4Kaw4KeL4KayIOCmsOCngeCmruCnh+CmsCDgpqvgp4vgpqgg4Kao4Kau4KeN4Kas4Kaw4KaDIOCnpuCnp+CnreCnp+CnrC3gp6bgp6zgp6ngp6rgp6jgp6ssIOCnpuCnp+CnreCnreCnqS3gp6ngp6/gp6ngp6jgp63gp6wsIOCnpuCnp+CnreCnp+Cnqy3gp6jgp6ngp67gp63gp6vgp6oqKsKgPC9zcGFuPjxzcGFuIHN0eWxlPSJjb2xvcjpyZ2IoMCwgMTI4LCAwKSI+4Kah4KeH4KaZ4KeN4KaX4KeBPC9zcGFuPjxzcGFuIHN0eWxlPSJjb2xvcjpyZ2IoMCwgMTAwLCAwKSI+IOCmqOCmv+Cnn+CmqOCnjeCmpOCnjeCmsOCmo+CnhyDgppXgprDgpqjgp4Dgp58g4Ka44KaC4KaV4KeN4Kaw4Ka+4Kao4KeN4KakIOCmoeCmv+Cmj+CmqOCmuOCmv+CmuOCmvyfgprAg4Ka54Kaf4Kay4Ka+4KaH4KaoIOCmqOCmruCnjeCmrOCmsCA8L3NwYW4+PHNwYW4gc3R5bGU9ImNvbG9yOnJnYigwLCAyNTUsIDApIj4o4KenKcKgPC9zcGFuPuCmrOCnjeCmsOCmv+Cml+Cnh+CmgyDgppzgp4fgpqjgpr7gprDgp4fgprIg4KaH4Kau4Kaw4KeB4KayIOCmleCmvuCnn+Cnh+CmuCDgpprgp4zgpqfgp4HgprDgp4A8c3BhbiBzdHlsZT0iY29sb3I6cmdiKDAsIDI1NSwgMCkiPi08L3NwYW4+4Kem4Ken4Ket4Ken4KesLeCnpuCnrOCnqeCnquCnqOCnqyw8c3BhbiBzdHlsZT0iY29sb3I6cmdiKDAsIDI1NSwgMCkiPsKgKOCnqCnCoOCmoeCmvuCmgyDgpq7gp4vgprngpr7gpq7gp43gpq7gpqYg4Kay4KeB4KeO4Kar4KawIOCmsOCmueCmruCmvuCmqC3CoDAxNTIxMjA5NjQ1wqAo4KepKcKg4Kah4Ka+4KaDIOCmruCni+CmgyDgpofgpq7gpqbgpr7gpqbgp4HgprIg4Ka54KaVLTAxNzE1LTIzODc1NCwgKOCnqinCoOCmleCng+Cmt+Cmv+CmrOCmv+CmpiDgpq7gp4vgpoMg4KaG4Ka44Ka/4KarIOCmh+CmleCmrOCmvuCmsi0wMTcxNTQzNjkwNSw8L3NwYW4+wqA8c3BhbiBzdHlsZT0iY29sb3I6cmdiKDI1NSwgMCwgMCkiPijgp6sp4Kah4Ka+LiDgpq7gpr7gpqzgpr/gp5/gpr4g4Ka44KeB4Kay4Kak4Ka+4Kao4Ka+IOCmtuCni+CmreCmvi08L3NwYW4+PHNwYW4gc3R5bGU9ImNvbG9yOnJnYigyNTUsIDAsIDApOyBmb250LWZhbWlseTprYWxwdXJ1c2hyZWd1bGFyOyBmb250LXNpemU6MTRweCI+MDE1MjE0OTU1MjA8L3NwYW4+PHNwYW4gc3R5bGU9ImNvbG9yOnJnYigyNTUsIDAsIDApIj48c3BhbiBzdHlsZT0iZm9udC1mYW1pbHk6a2FscHVydXNocmVndWxhcjsgZm9udC1zaXplOjE0cHgiPiwg4KaF4Kae4KeN4Kaa4KayLeCnpywgKOCnrCnCoDwvc3Bhbj7gpqHgpr4uIOCmruCni+CmueCmvuCmruCnjeCmruCmpiDgprjgpr7gpqbgpq7gpr7gpqjCoCDgprjgpr7gppXgpr/gpqwtPC9zcGFuPjxzcGFuIHN0eWxlPSJjb2xvcjpyZ2IoMjU1LCAwLCAwKTsgZm9udC1mYW1pbHk6a2FscHVydXNocmVndWxhcjsgZm9udC1zaXplOjE0cHgiPjAxNzU5OTQyNDE0PC9zcGFuPjxzcGFuIHN0eWxlPSJjb2xvcjpyZ2IoMjU1LCAwLCAwKSI+PHNwYW4gc3R5bGU9ImZvbnQtZmFtaWx5OmthbHB1cnVzaHJlZ3VsYXI7IGZvbnQtc2l6ZToxNHB4Ij4swqDgpoXgpp7gp43gpprgprIt4KeoLCAo4KetKcKgPC9zcGFuPjwvc3Bhbj7gpqHgpr7gpoMg4KaG4Kac4Ka/4Kac4KeB4KaoIOCmqOCnh+Cmm+CmvjxzcGFuIHN0eWxlPSJjb2xvcjpyZ2IoMjU1LCAwLCAwKSI+LTwvc3Bhbj7gp6bgp6fgp63gp6vgp6zgp6jgp6bgp6/gp6rgp67gp6g8c3BhbiBzdHlsZT0iY29sb3I6cmdiKDI1NSwgMCwgMCkiPjxzcGFuIHN0eWxlPSJmb250LWZhbWlseTprYWxwdXJ1c2hyZWd1bGFyOyBmb250LXNpemU6MTRweCI+LCDgpoXgpp7gp43gpprgprIt4KepLCAo4KeuKcKgPC9zcGFuPuCmoeCmvuCmgyDgpq7gpr7gprngpq7gp4Hgpqbgpr4g4KaG4Kay4KeALTAxNzE1NDU2Njk4LMKgPHNwYW4gc3R5bGU9ImZvbnQtZmFtaWx5OmthbHB1cnVzaHJlZ3VsYXI7IGZvbnQtc2l6ZToxNHB4Ij7gpoXgpp7gp43gpprgprIt4KeqLDwvc3Bhbj7CoCjgp68pIOCmoeCmvuCmgyDgpo/gprgg4KaP4KauIOCmk+Cnn+CmvuCmuOCmv+CmruCngeCmsiDgpofgprjgprLgpr7gpq4tMDE3MzU4NDM2OTMswqA8c3BhbiBzdHlsZT0iZm9udC1mYW1pbHk6a2FscHVydXNocmVndWxhcjsgZm9udC1zaXplOjE0cHgiPuCmheCmnuCnjeCmmuCmsi3gp6ssICjgp6fgp6YpwqA8L3NwYW4+4Kah4Ka+4KaDIOCmruCni+CmgyDgpqvgpr/gprDgp4fgpr7gppwg4KaG4Kay4KauLTwvc3Bhbj48c3BhbiBzdHlsZT0iY29sb3I6cmdiKDI1NSwgMCwgMCk7IGZvbnQtZmFtaWx5OmthbHB1cnVzaHJlZ3VsYXI7IGZvbnQtc2l6ZToxNHB4Ij4wMTcxNjM5ODg4Njwvc3Bhbj48c3BhbiBzdHlsZT0iY29sb3I6cmdiKDI1NSwgMCwgMCkiPjxzcGFuIHN0eWxlPSJmb250LWZhbWlseTprYWxwdXJ1c2hyZWd1bGFyOyBmb250LXNpemU6MTRweCI+LCDgpoXgpp7gp43gpprgprIt4KesICjgp6fgp6cpPC9zcGFuPuCmoeCmvuCmgyDgpqvgpr7gprDgppzgpr7gpqjgpr4g4KaG4Kar4Kaw4KeL4KacLTwvc3Bhbj48c3BhbiBzdHlsZT0iY29sb3I6cmdiKDI1NSwgMCwgMCk7IGZvbnQtZmFtaWx5OmthbHB1cnVzaHJlZ3VsYXI7IGZvbnQtc2l6ZToxNHB4Ij4wMTc0NDk4OTkwOTwvc3Bhbj48c3BhbiBzdHlsZT0iY29sb3I6cmdiKDI1NSwgMCwgMCkiPjxzcGFuIHN0eWxlPSJmb250LWZhbWlseTprYWxwdXJ1c2hyZWd1bGFyOyBmb250LXNpemU6MTRweCI+LMKg4KaF4Kae4KeN4Kaa4KayLeCnrSAo4Ken4KeoKcKgPC9zcGFuPuCmoeCmvi4g4Kau4Ka+4Kas4Ka/4Kef4Ka+IOCmuOCngeCmsuCmpOCmvuCmqOCmviDgprbgp4vgpq3gpr4tPHNwYW4gc3R5bGU9ImZvbnQtZmFtaWx5OmthbHB1cnVzaHJlZ3VsYXI7IGZvbnQtc2l6ZToxNHB4Ij4wMTUyMTQ5NTUyMCzCoDwvc3Bhbj48c3BhbiBzdHlsZT0iZm9udC1mYW1pbHk6a2FscHVydXNocmVndWxhcjsgZm9udC1zaXplOjE0cHgiPuCmheCmnuCnjeCmmuCmsi3gp64gKOCnp+CnqSnCoDwvc3Bhbj7gpqHgpr4uIOCmuOCnh+CmvuCmqOCmv+Cnn+CmviDgprjgp4HgprLgpqTgpr7gpqjgpr4tPHNwYW4gc3R5bGU9ImZvbnQtZmFtaWx5OmthbHB1cnVzaHJlZ3VsYXI7IGZvbnQtc2l6ZToxNHB4Ij4wMTY3ODcxMzk0OSwg4KaF4Kae4KeN4Kaa4KayLeCnryAo4Ken4KeqKSA8L3NwYW4+4Kah4Ka+4KaDIOCmj+CmuCDgpo/gpq4g4KaT4Kef4Ka+4Ka44Ka/4Kau4KeB4KayIOCmh+CmuOCmsuCmvuCmri0wMTczNTg0MzY5Mywg4KaF4Kae4KeN4Kaa4KayLeCnp+Cnpjwvc3Bhbj48c3BhbiBzdHlsZT0iY29sb3I6cmdiKDAsIDI1NSwgMCkiPjxzcGFuIHN0eWxlPSJmb250LXNpemU6MTRweCI+Kio8L3NwYW4+PC9zcGFuPjxzcGFuIHN0eWxlPSJiYWNrZ3JvdW5kLWNvbG9yOnJnYigyNDUsIDI0NSwgMjQ1KTsgZm9udC1mYW1pbHk6a2FscHVydXNocmVndWxhcjsgZm9udC1zaXplOjE0cHgiPuCmhuCmuOCngeCmqCAi4Ka44KeB4Ka44KeN4Kal4Kak4Ka+4KawIOCmnOCmqOCnjeCmr+CnhyDgprjgpr7gpq7gpr7gppzgpr/gppUg4KaG4Kao4KeN4Kam4KeL4Kay4KaoIOCml+CnnOCnhyDgpqTgp4HgprLgpr8iwqA8L3NwYW4+PHNwYW4gc3R5bGU9ImNvbG9yOnJnYigyNTUsIDAsIDApIj48c3BhbiBzdHlsZT0iZm9udC1zaXplOjE0cHgiPsKgPC9zcGFuPuCnp+CnpiDgpp/gpr7gp58g4Ken4KemIOCmruCmv+CmqOCmv+CmnyDgpqrgp43gprDgpqTgpr8g4Ka24Kao4Ka/4Kas4Ka+4KawLCDgpqjgpr/gppwg4Kao4Ka/4KacIOCmrOCmvuCmuOCmviDgppXgprDgpr8g4Kaq4Kaw4Ka/4Ka34KeN4KaV4Ka+4KawKio8L3NwYW4+PHNwYW4gc3R5bGU9ImJhY2tncm91bmQtY29sb3I6cmdiKDI0NSwgMjQ1LCAyNDUpOyBmb250LWZhbWlseTprYWxwdXJ1c2hyZWd1bGFyOyBmb250LXNpemU6MTRweCI+4Kak4Ka/4KaoIOCmpuCmv+CmqOCnhyDgpo/gppUg4Kam4Ka/4KaoIOCmnOCmruCmviDgpqrgpr7gpqjgpr8g4Kar4KeH4Kay4KeHIOCmpuCmv+CmqCoq4Kau4Ka+4Ka44KeN4KaVIOCmhuCmruCmvuCmsCDgprjgp4HgprDgppXgp43gprfgpr4g4Ka44Kas4Ka+4KawPC9zcGFuPjxzcGFuIHN0eWxlPSJjb2xvcjpyZ2IoMjU1LCAwLCAwKSI+wqA8L3NwYW4+PHNwYW4gc3R5bGU9ImZvbnQtc2l6ZToxNHB4Ij48c3BhbiBzdHlsZT0iY29sb3I6I0ZGMDAwMCI+Kio8c3BhbiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjpyZ2IoMjQ1LCAyNDUsIDI0NSk7IGZvbnQtZmFtaWx5OmthbHB1cnVzaHJlZ3VsYXIiPuCmoeCmv+Cmj+CmqOCmuOCmv+CmuOCmv+CmsCDgp6vgpp/gpr8g4Kao4KaX4KawIOCmruCmvuCmpOCng+CmuOCmpuCmqOCnhyDgppXgp4vgpq3gpr/gpqEt4Ken4KevIOCmuOCmguCmleCnjeCmsOCmvuCmqOCnjeCmpCDgpp/gp4fgprLgpr/gpq7gp4fgpqHgpr/gprjgpr/gpqgg4Ka44KeH4Kas4Ka+IOCmquCnjeCmsOCmpuCmvuCmqOClpCDgpq7gpr7gpqTgp4Pgprjgpqbgpqjgp4fgprAg4Kao4Ka+4KauIOCmj+CmrOCmgiDgpp/gp4fgprLgpr/gpqvgp4vgpqgg4Kao4Kau4KeN4Kas4KawOiDgpqrgpr/gpo8t4KenIOCmqOCmvuCmsOCngCDgpq7gp4jgpqTgp43gprDgp4Ag4Kau4KaX4Kas4Ka+4Kac4Ka+4KawLeCnq+CnruCnqeCnp+CnquCnr+CnqeCnqTwvc3Bhbj48c3BhbiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjpyZ2IoMjQ1LCAyNDUsIDI0NSk7IGZvbnQtZmFtaWx5OmthbHB1cnVzaHJlZ3VsYXIiPizCoMKg4Kaq4Ka/4KaPLeCnqCDgpqjgpr7gprDgp4Ag4Kau4KeI4Kak4KeN4Kaw4KeAIOCmruCni+CmueCmvuCmruCnjeCmruCmpuCmquCngeCmsC3gp6bgp6fgp6ngp6fgp6fgp6/gp6rgp6zgp6rgp6ngp6g8L3NwYW4+PHNwYW4gc3R5bGU9ImJhY2tncm91bmQtY29sb3I6cmdiKDI0NSwgMjQ1LCAyNDUpOyBmb250LWZhbWlseTprYWxwdXJ1c2hyZWd1bGFyIj4sIOCmquCmv+Cmjy3gp6kg4Kao4Ka+4Kaw4KeAIOCmruCniOCmpOCnjeCmsOCngCDgpqLgpr7gppXgpr4g4KaG4Ka54Ka44Kao4Ka/4Kef4Ka+IOCmruCmv+CmtuCmqCwg4Kao4KeH4KaV4Ka/4Kas4Ka+4Kec4Ka/4Kaw4Kaf4KeH4KaVLCDgpq7gpr/gprDgpqrgp4HgprAt4Kem4Ken4Kep4Kem4Ken4Ker4Kev4Kes4Keu4Kep4KevPC9zcGFuPjxzcGFuIHN0eWxlPSJiYWNrZ3JvdW5kLWNvbG9yOnJnYigyNDUsIDI0NSwgMjQ1KTsgZm9udC1mYW1pbHk6a2FscHVydXNocmVndWxhciI+LMKg4Kaq4Ka/4KaPLeCnqiDgpqjgpr7gprDgp4Ag4Kau4KeI4Kak4KeN4Kaw4KeAIOCmquCmsuCnjeCmsuCmrOCngCwg4Kau4Ka/4Kaw4Kaq4KeB4KawLeCnpuCnp+CnreCnreCnpuCnreCnqOCnqOCnp+Cnr+Cnqjwvc3Bhbj48c3BhbiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjpyZ2IoMjQ1LCAyNDUsIDI0NSk7IGZvbnQtZmFtaWx5OmthbHB1cnVzaHJlZ3VsYXIiPizCoOCmquCmv+Cmjy3gp6sg4KaH4KaJ4Kaf4Ka/4Kaq4Ka/4KaP4Ka4IOCmieCmpOCnjeCmpOCmsOCmvi3gp6bgp6fgp6ngp6fgp6rgp63gp6zgp6zgp6vgp6rgp6s8L3NwYW4+PC9zcGFuPjwvc3Bhbj48c3BhbiBzdHlsZT0iY29sb3I6cmdiKDAsIDEyOCwgMCkiPsKgPC9zcGFuPjxzcGFuIHN0eWxlPSJjb2xvcjpyZ2IoMjU1LCAwLCAwKSI+Kio8L3NwYW4+PHNwYW4gc3R5bGU9ImNvbG9yOnJnYigwLCAxMjgsIDApIj7CoOCmuOCmruCnn+CmruCmpCDgppXgprDgp43gpqrgp4vgprDgp4fgprbgpqgg4KaV4KawIOCmquCmsOCmv+CmtuCni+CmpyDgppXgprDgp4cg4Kao4KaX4KawIOCmieCmqOCnjeCmqOCnn+CmqOCnhyDgprjgprngpr7gp5/gpqTgpr4g4KaV4Kaw4KeB4KaowqA8L3NwYW4+PHNwYW4gc3R5bGU9ImNvbG9yOnJnYigyNTUsIDAsIDApIj4qKsKgPC9zcGFuPjxzcGFuIHN0eWxlPSJjb2xvcjpyZ2IoMCwgMTI4LCAwKSI+4Kao4Ka/4Kaw4KeN4Kan4Ka+4Kaw4Ka/4KakIOCmoeCmvuCmuOCnjeCmn+CmrOCmv+CmqC/gprLgpr/gpp/gpr7gprDgpqzgpr/gpqgv4KaV4Kao4KeN4Kaf4KeH4KaH4Kao4Ka+4KawIOCmm+CmvuCnnOCmviDgpq/gpqTgp43gprDgpqTgpqTgp43gprAg4Kau4Kef4Kay4Ka+L+CmhuCmrOCmsOCnjeCmnOCmqOCmviDgpqvgp4fgprLgpqzgp4fgpqgg4Kao4Ka+wqA8L3NwYW4+PHNwYW4gc3R5bGU9ImNvbG9yOnJnYigyNTUsIDAsIDApIj4qKjwvc3Bhbj48c3BhbiBzdHlsZT0iY29sb3I6cmdiKDAsIDEyOCwgMCkiPsKg4Kao4Ka/4Kaw4KeN4Kau4Ka+4KaoIOCmuOCmvuCmruCml+CnjeCmsOCngC/gprDgpr7gpqzgpr/gprYv4Kau4Ka+4Kaf4Ka/IOCmh+CmpOCnjeCmr+CmvuCmpuCmvyDgprDgpr7gprjgp43gpqTgpr4v4Kar4KeB4Kaf4Kaq4Ka+4Kak4KeHIOCmsOCnh+CmluCnhyDgpo/gprLgpr7gppXgpr4g4KaF4Kaq4Kaw4Ka/4Kaa4KeN4Kab4Kao4KeN4KaoIOCmkyDgppzgpqjgprjgpr7gpqfgpr7gprDgpqjgp4fgprAg4Kaa4Kay4Ka+4Kaa4Kay4KeHIOCmheCmuOCngeCmrOCmv+Cmp+CmviDgprjgp4Pgprfgp43gpp/gpr8g4KaV4Kaw4Kas4KeH4KaoIOCmqOCmvsKgPC9zcGFuPjxzcGFuIHN0eWxlPSJjb2xvcjpyZ2IoMjU1LCAwLCAwKSI+Kio8L3NwYW4+PHNwYW4gc3R5bGU9ImNvbG9yOnJnYigwLCAxMjgsIDApIj7CoOCmqOCmsOCnjeCmpuCmruCmvuCnnyDgpobgpqzgprDgp43gppzgpqjgpr4v4Kau4Ka+4Kaf4Ka/L+CmrOCmvuCmsuCngSDgpofgpqTgp43gpq/gpr7gpqbgpr8g4Kar4KeH4Kay4Kas4KeH4KaoIOCmqOCmvsKgPC9zcGFuPjxzcGFuIHN0eWxlPSJjb2xvcjpyZ2IoMjU1LCAwLCAwKSI+Kio8L3NwYW4+PHNwYW4gc3R5bGU9ImNvbG9yOnJnYigwLCAxMjgsIDApIj7CoOCmp+CngeCmruCmquCmvuCmqCDgppMg4Kak4Ka+4Kau4Ka+4KaVIOCmuOCnjeCmrOCmvuCmuOCnjeCmpeCnjeCmr+Cnh+CmsCDgppzgpqjgp43gpq8g4Kau4Ka+4Kaw4Ka+4Kak4KeN4Kau4KaVIOCmleCnjeCmt+CmpOCmv+CmleCmsCwg4Kan4KeB4Kau4Kaq4Ka+4KaoIOCmkyDgpqTgpr7gpq7gpr7gppUg4Kab4Ka+4Kec4KeB4KaoLCDgprjgp4Hgprjgp43gpqUg4Kal4Ka+4KaV4KeB4KaowqA8L3NwYW4+PHNwYW4gc3R5bGU9ImNvbG9yOnJnYigyNTUsIDAsIDApIj4qKjwvc3Bhbj48c3BhbiBzdHlsZT0iY29sb3I6cmdiKDAsIDEyOCwgMCkiPsKg4Kau4Ka+4Kam4KaVIOCmuOCnh+CmrOCmqCDgpobgpqrgpqjgpr7gprAsIOCmhuCmquCmqOCmvuCmsCDgpqrgprDgpr/gpqzgpr7gprAg4KaTIOCmuOCmruCmvuCmnOCnh+CmsCDgppXgp43gprfgpqTgpr8g4KaV4Kaw4KeHLCDgpq7gpr7gpqbgppXgppXgp4cg4Kao4Ka+IOCmrOCmsuCmvyDgppMg4Kau4Ka+4Kam4KaV4Kau4KeB4KaV4KeN4KakIOCmuOCmruCmvuCmnCDgppfgp5zgpr/gpaTCoDwvc3Bhbj48L3A+Cgo8cCBzdHlsZT0idGV4dC1hbGlnbjpqdXN0aWZ5Ij7CoDwvcD4KPC9tYXJxdWVlPg=="> --}}
+                                <marquee scrollamount="7"
+                                    style="font-family: 'Kalpurush', sans-serif; font-size: 16px;    padding-top: 10px;">
+                                    <i class="fas fa-play"></i> &nbsp; আপনার সন্তানের জন্ম নিবন্ধন সম্পন্ন
+                                    করুন
+                                    <i class="fas fa-play"></i> &nbsp; <samp style="color: red">**</samp> আবর্জনা সঠিক
+                                    স্থানে ফেলুন
+                                    <i class="fas fa-play"></i> &nbsp; <samp style="color: red">**</samp> সময়মতো
+                                    পানির বিল পরিশোধ করুন
+                                    <i class="fas fa-play"></i> &nbsp;<samp style="color: red">**</samp> যে কোন
+                                    স্থাপনা নির্মাণের জন্য পৌরসভার
+                                    অনুমোদন গ্রহন করুন এবং পরিকল্পিত নগরায়ণে সহায়তা করুন
+                                    <i class="fas fa-play"></i> &nbsp; <samp style="color: red">**</samp> আপনার
+                                    পৌরসভাকে পরিচ্ছন্ন রাখুন
+                                    <i class="fas fa-play"></i> &nbsp; <samp style="color: red">**</samp> আপনার পৌর কর
+                                    নিয়মিত পরিশোধ করুন
+                                    <i class="fas fa-play"></i> &nbsp; <samp style="color: red">**</samp> হাজীগঞ্জ
+                                    পৌরসভার পক্ষ থেকে সবাইকে শুভেচ্ছা
+
+                                    <i class="fas fa-play"></i> &nbsp; <samp style="color: red">**</samp> মাদক মুক্ত
+                                    সমাজ গঠন করুন
+                                </marquee>
+                                </rt-renderer>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-widget_type="widget" data-widget_name="BlockWidget" data-widget_content_type="blocks"
+                        data-widget_item="6922d3d2dbfbab28ce041c82" class="widget block-widget">
+                        <div class="block-widget-container">
+                            <div class="block-widget-content">
+                                <rt-renderer {{-- encoded-content="PG1hcnF1ZWUgY2xhc3M9ImN1c3RvbS1tYXJxdWVlIiBkaX
+                                    JlY3Rpb249ImxlZnQiIHNjcm9sbGFtb3VudD0iNyIgeG9ubW91c2VvdmVyPSJ0aG
+                                    lzLnN0b3AoKSIgeG9ubW91c2VvdXQ9InRoaXMuc3RhcnQoKSI+PGg0PjxzcGFuIHN
+                                    0eWxlPSJjb2xvcjpyZ2IoMjU1LDAsMCkiPioqPC9zcGFuPjxhIGhyZWY9Imh0dHBzO
+                                    i8vZG5jYy5nb3YuYmQvcGFnZXMvc3RhdGljLXBhZ2VzL3ZpdGFtaW4tYS1wbHVzLWN
+                                    hbXAtY2VudGVycy05b2dqenMtNmE0MDk4MDcwZjUzYTZmNjdmNGMyMDQ3Ij48c3Bhbi
+                                    
+                                    BzdHlsZT0iY29sb3I6cmdiKDI1NSwwLDApIj7gpq3gpr/gpp/gpr7gpq7gpr/gpqgg4o
+                                    CY4KaP4oCZIOCmquCnjeCmsuCmvuCmuCDgppXgp43gpq/gpr7gpq7gp43gpqrgp4fgpoc
+                                    g4KaV4KeH4Kao4KeN4Kam4KeN4Kaw4Ka44Kau4KeC4Ka5PC9zcGFuPjwvYT48c3BhbiBz
+                                    dHlsZT0iY29sb3I6cmdiKDI1NSwwLDApO2ZvbnQtc2l6ZToxNnB4Ij4gPC9zcGFuPjxzcG
+                                    FuIHN0eWxlPSJjb2xvcjpyZ2IoMCwxMjgsMCk7Zm9udC1zaXplOjE2cHgiPioqPC9zcGFuP
+                                    jxhIHN0eWxlPSJmb250LXNpemU6MTRweCIgaHJlZj0iL3BhZ2VzL3N0YXRpYy1wYWdlcy82
+                                    OTIyZTA3YTkzM2ViNjU1NjllMjc0MDYiPjxzcGFuIHN0eWxlPSJiYWNrZ3JvdW5kLWNvbG9
+                                    yOnJnYigwLDI1NSwwKTtjb2xvcjpyZ2IoMjU1LDAsMCkiPjxzdHJvbmc+4Kai4Ka+4KaV4K
+                                    a+IOCmieCmpOCnjeCmpOCmsCDgprjgpr/gpp/gpr8g4KaV4Kaw4KeN4Kaq4KeL4Kaw4KeH4
+                                    Ka24Kao4KeH4KawIOCmrOCmv+CmreCmv+CmqOCnjeCmqCDgpoXgpp7gp43gpprgprIvIOCm
+                                    k+Cnn+CmvuCmsOCnjeCmoeCnh+CmsCDgpqbgpr7gp5/gpr/gpqTgp43gpqzgpqrgp43gprD
+                                    gpr7gpqrgp43gpqQg4KaV4Kaw4KeN4Kau4KaV4Kaw4KeN4Kak4Ka+4KawICjgprjgp43gpq
+                                    zgpr7gprjgp43gpqXgp43gpq8g4KaTIOCmrOCmsOCnjeCmnOCnjeCmryDgpqzgpr/gpq3gp
+                                    r7gppcpIOCmpOCmvuCmsuCmv+CmleCmvjwvc3Ryb25nPjwvc3Bhbj48L2E+PGEgaHJlZj0i
+                                    L3BhZ2VzL3N0YXRpYy1wYWdlcy82OTIyZTA3YTkzM2ViNjU1NjllMjc0MDYiPjxzcGFuIHN
+                                    0eWxlPSJiYWNrZ3JvdW5kLWNvbG9yOnJnYigwLDI1NSwwKTtjb2xvcjpyZ2IoMjU1LDAsMC
+                                    k7Zm9udC1zaXplOjE0cHgiPjxzcGFuIGNsYXNzPSJtYXJrZXIiPjxzdHJvbmc+wqA8L3N0c
+                                    m9uZz48L3NwYW4+PC9zcGFuPjwvYT48c3BhbiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjpy
+                                    Z2IoMjU1LDIxNSwwKTtmb250LXNpemU6MTRweCI+PHNwYW4gY2xhc3M9Im1hcmtlciI+PHN
+                                    0cm9uZz4qKsKgPC9zdHJvbmc+PC9zcGFuPjwvc3Bhbj48c3BhbiBzdHlsZT0iYmFja2dyb3
+                                    VuZC1jb2xvcjpyZ2IoMjU1LDIxNSwwKSI+PHN0cm9uZz7gpoXgpqbgp43gpq8g4Kem4KepI
+                                    OCmhuCml+CmuOCnjeCmnyDgp6jgp6bgp6jgp6wg4KaW4KeN4Kaw4Ka/4KaDIOCmpOCmvuCm
+                                    sOCmv+CmluCnhyDgpqLgpr7gppXgpr4g4KaJ4Kak4KeN4Kak4KawIOCmuOCmv+Cmn+CmvyD
+                                    gppXgprDgp43gpqrgp4vgprDgp4fgprbgpqgg4KaG4Kak4Ka+4Kan4KeA4KaoIOCmj+Cmsu
+                                    CmvuCmleCmvuCnnyDgpqzgprDgp43gppzgp43gpq8g4KaF4Kaq4Ka44Ka+4Kaw4Kaj4KeH4
+                                    KawIOCmquCmsOCmv+CmruCmvuCmoyAtIOCnqSzgp67gp6jgp68g4Kau4KeH4Kaf4KeN4Kaw
+                                    4Ka/4KaVIOCmn+CmqDwvc3Ryb25nPjwvc3Bhbj48c3BhbiBzdHlsZT0iYmFja2dyb3VuZC1
+                                    jb2xvcjpyZ2IoMjU1LDIxNSwwKTtmb250LXNpemU6MTRweCI+PHNwYW4gY2xhc3M9Im1hcm
+                                    tlciI+PHN0cm9uZz7CoDwvc3Ryb25nPjwvc3Bhbj48L3NwYW4+PGEgc3R5bGU9ImZvbnQtc
+                                    2l6ZToxNHB4IiBocmVmPSIvcGFnZXMvc3RhdGljLXBhZ2VzLzY5MjJlMDdhOTMzZWI2NTU2
+                                    OWUyNzQwNiI+PHNwYW4gc3R5bGU9ImNvbG9yOnJnYigyNTUsMCwwKSI+PHN0cm9uZz4qKjw
+                                    vc3Ryb25nPjwvc3Bhbj48L2E+PC9oND48L21hcnF1ZWU+" --}}>
+
+                                    <marquee class="custom-marquee" direction="left" scrollamount="5"
+                                        xonmouseover="this.stop()" xonmouseout="this.start()">
+                                        <h4><span style="color:rgb(255,0,0)">**</span><a style="text-decoration: none;"
+                                                href="pages/static-pages/vitamin-a-plus-camp-centers-9ogjzs-6a4098070f53a6f67f4c2047.html"><span
+                                                    style="color:rgb(255,0,0)"> উন্নয়নমূলক প্রকল্প </span></a><span
+                                                style="color:rgb(255,0,0);font-size:16px"> </span><span
+                                                style="color:rgb(0,128,0);font-size:16px">**</span><a
+                                                style="font-size:14px; text-decoration: none;"
+                                                href="pages/static-pages/6922e07a933eb65569e27406.html"><span
+                                                    style="background-color:rgb(0,255,0);color:rgb(255,0,0)"><strong>বিশুদ্ধ
+                                                        পানি ও জল প্রকল্প ||বায়োগ্যাস প্রকল্প
+                                                        ||সৌর বিদ্যুৎ প্রকল্প
+                                                        ||আধুনিক পয়ঃনিষ্কাশন প্রকল্প
+                                                        ||ফায়ার হাইড্রেন্ট প্রকল্প
+                                                        ||বর্জ্য ব্যবস্থাপনা প্রকল্প
+                                                        ||ভূগর্ভস্থ বিদ্যুৎ ও ইন্টারনেট কেবল
+                                                        প্রকল্প</strong></span></a><a
+                                                href="pages/static-pages/6922e07a933eb65569e27406.html"><span
+                                                    style="background-color:rgb(0,255,0);color:rgb(255,0,0);font-size:14px"><span
+                                                        class="marker"><strong> </strong></span></span></a><span
+                                                style="background-color:rgb(255,215,0);font-size:14px"><span
+                                                    class="marker"><strong>** </strong></span></span><span
+                                                style="background-color:rgb(255,215,0)"><strong></strong></span><span
+                                                style="background-color:rgb(255,215,0);font-size:14px"><span
+                                                    class="marker"><strong> </strong></span></span><a
+                                                style="font-size:14px"
+                                                href="pages/static-pages/6922e07a933eb65569e27406.html"><span
+                                                    style="color:rgb(255,0,0)"><strong>**</strong></span></a></h4>
+                                    </marquee>
+                                </rt-renderer>
+                            </div>
+                        </div>
+                    </div>
+    <!-- ===== POPULAR SERVICES ===== -->
+    <section class="py-5 bg-white" id="services">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-between align-items-end mb-4">
+                <div>
+                    <h2 class="fw-bold" data-bn>জনপ্রিয় নাগরিক সেবা</h2>
+                    <h2 class="fw-bold" data-en>Popular Citizen Services</h2>
+                    <p class="text-muted" data-bn>প্রতিদিন সবচেয়ে বেশি ব্যবহৃত হয় এমন সেবাসমূহ এক জায়গায়।</p>
+                    <p class="text-muted" data-en>The services citizens use most, all in one place.</p>
+                </div>
+                <a class="fw-bold text-green-deep text-decoration-none" href="#"><span data-bn>সকল সেবা
+                        দেখুন</span><span data-en>View all services</span> →</a>
+            </div>
+            <div class="row g-4" id="service-grid"></div>
+        </div>
+    </section>
+
+    <!-- ===== EMERGENCY ===== -->
+    <section class="py-4" style="background:#FBEAEA;" id="emergency">
+        <div class="container">
+            <div class="mb-3">
+                <h2 class="fw-bold" data-bn>জরুরি যোগাযোগ</h2>
+                <h2 class="fw-bold" data-en>Emergency Contact</h2>
+                <p class="text-muted" data-bn>জরুরি প্রয়োজনে দ্রুত যোগাযোগ করুন — মোবাইলে সরাসরি কল করুন।</p>
+                <p class="text-muted" data-en>Reach emergency services quickly — tap to call directly from mobile.</p>
+            </div>
+            <div class="row g-3" id="emergency-grid">
+                <div class="col-6 col-md-3">
+                    <div class="emergency-card">
+                        <div class="num">৯৯৯</div>
+                        <div class="fw-semibold" data-bn>জরুরি সেবা</div>
+                        <div class="fw-semibold" data-en>National Emergency</div><a href="tel:999"
+                            class="btn btn-outline-secondary btn-sm rounded-pill mt-2">কল করুন</a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="emergency-card">
+                        <div class="num">৩৩৩</div>
+                        <div class="fw-semibold" data-bn>সরকারি তথ্য ও সেবা</div>
+                        <div class="fw-semibold" data-en>Govt. Info Service</div><a href="tel:333"
+                            class="btn btn-outline-secondary btn-sm rounded-pill mt-2">কল করুন</a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="emergency-card">
+                        <div class="num">১০২</div>
+                        <div class="fw-semibold" data-bn>ফায়ার সার্ভিস</div>
+                        <div class="fw-semibold" data-en>Fire Service</div><a href="tel:102"
+                            class="btn btn-outline-secondary btn-sm rounded-pill mt-2">কল করুন</a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="emergency-card">
+                        <div class="num">১৬১০৬</div>
+                        <div class="fw-semibold" data-bn>ডিএনসিসি হটলাইন</div>
+                        <div class="fw-semibold" data-en>DNCC Hotline</div><a href="tel:16106"
+                            class="btn btn-outline-secondary btn-sm rounded-pill mt-2">কল করুন</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== NOTICES ===== -->
+    <section class="py-5 bg-white" id="notices">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-between align-items-end mb-4">
+                <div>
+                    <h2 class="fw-bold" data-bn>নোটিশ ও বিজ্ঞপ্তি</h2>
+                    <h2 class="fw-bold" data-en>Notices &amp; Announcements</h2>
+                </div>
+                <a class="fw-bold text-green-deep text-decoration-none" href="#"><span data-bn>সকল নোটিশ
+                        দেখুন</span><span data-en>View all notices</span> →</a>
+            </div>
+            <ul class="nav nav-tabs border-0 gap-2 flex-wrap" id="noticeTabs" role="tablist"></ul>
+            <div class="notice-list border rounded-4 overflow-hidden mt-3" id="notice-list"></div>
+        </div>
+    </section>
+
+    <!-- ===== NEWS ===== -->
+    <section class="py-5 bg-lavender">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-between align-items-end mb-4">
+                <div>
+                    <h2 class="fw-bold" data-bn>সাম্প্রতিক খবর</h2>
+                    <h2 class="fw-bold" data-en>Latest News</h2>
+                </div>
+                <a class="fw-bold text-green-deep text-decoration-none" href="#"><span data-bn>সকল খবর
+                        দেখুন</span><span data-en>View all news</span> →</a>
+            </div>
+            <div class="row g-4" id="news-grid"></div>
+        </div>
+    </section>
+
+    <!-- ===== CIVIC OPERATIONS ===== -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="mb-4">
+                <h2 class="fw-bold" data-bn>সিটি অপারেশন</h2>
+                <h2 class="fw-bold" data-en>City Operations</h2>
+                <p class="text-muted" data-bn>ঢাকা উত্তরের দৈনন্দিন নাগরিক পরিষেবা কার্যক্রম।</p>
+                <p class="text-muted" data-en>Everyday civic operations across Dhaka North.</p>
+            </div>
+            <div class="row g-3" id="civic-grid"></div>
+        </div>
+    </section>
+
+    <!-- ===== E-REVENUE ===== -->
+    <section class="py-5 bg-soft-gray">
+        <div class="container">
+            <div class="erevenue d-flex flex-wrap align-items-center justify-content-between gap-4">
+                <div>
+                    <h2 class="fw-bold" data-bn>ই-রেভিনিউ</h2>
+                    <h2 class="fw-bold" data-en>e-Revenue</h2>
+                    <p class="opacity-75" data-bn>আপনার কর ও রাজস্ব সংক্রান্ত সেবা এখন অনলাইনে গ্রহণ করুন — দ্রুত,
+                        নিরাপদ ও ঘরে বসেই।</p>
+                    <p class="opacity-75" data-en>Access your tax and revenue services online — fast, secure, from
+                        home.</p>
+                </div>
+                <div class="d-flex flex-wrap gap-2">
+                    <a class="btn btn-light rounded-pill fw-semibold text-green-deep" href="#"><span
+                            data-bn>নাগরিক পোর্টাল</span><span data-en>Citizen Portal</span></a>
+                    <a class="btn btn-ghost rounded-pill fw-semibold" href="#"><span data-bn>অফিসার্স
+                            পোর্টাল</span><span data-en>Officers' Portal</span></a>
+                    <a class="btn btn-ghost rounded-pill fw-semibold" href="#"><span data-bn>রেভিনিউ
+                            হেল্পডেস্ক</span><span data-en>Revenue Helpdesk</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="py-5 bg-white" id="projects">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-between align-items-end mb-4">
+                <div>
+                    <h2 class="fw-bold" data-bn>উন্নয়ন প্রকল্প</h2>
+                    <h2 class="fw-bold" data-en>Development Projects</h2>
+                </div>
+                <a class="fw-bold text-green-deep text-decoration-none" href="#"><span data-bn>সকল প্রকল্প
+                        দেখুন</span><span data-en>View all projects</span> →</a>
+            </div>
+            <div class="row g-4" id="project-grid"></div>
+        </div>
+    </section>
+
+    <!-- ===== TRANSPARENCY ===== -->
+    <section class="py-5 bg-lavender" id="transparency">
+        <div class="container">
+            <div class="mb-4">
+                <h2 class="fw-bold" data-bn>স্বচ্ছতা ও জবাবদিহিতা</h2>
+                <h2 class="fw-bold" data-en>Transparency &amp; Accountability</h2>
+                <p class="text-muted" data-bn>ডিএনসিসি'র বাজেট, প্রতিবেদন ও নীতিমালা সংক্রান্ত তথ্য উন্মুক্ত।</p>
+                <p class="text-muted" data-en>Open access to DNCC's budget, reports and policy documents.</p>
+            </div>
+            <div class="row g-3" id="transparency-grid"></div>
+        </div>
+    </section>
+
+    <!-- ===== COMPLAINT / ENGAGEMENT ===== -->
+    <section class="py-5 bg-white" id="complaint">
+        <div class="container">
+            <div class="erevenue" style="background:var(--dark);">
+                <div>
+                    <h2 class="fw-bold" data-bn>নাগরিকদের সাথে আমাদের সংযোগ</h2>
+                    <h2 class="fw-bold" data-en>Connecting with Citizens</h2>
+                    <p class="opacity-75" data-bn>নাগরিক জরিপ, মতামত ও অভিযোগের মাধ্যমে আপনার কণ্ঠস্বর পৌঁছে দিন।</p>
+                    <p class="opacity-75" data-en>Share your voice through citizen surveys, feedback and complaints.
+                    </p>
+                </div>
+                <div class="d-flex flex-wrap gap-2">
+                    <a class="btn btn-light rounded-pill fw-semibold text-green-deep" href="#"><span
+                            data-bn>অভিযোগ দাখিল করুন</span><span data-en>File a Complaint</span></a>
+                    <a class="btn btn-ghost rounded-pill fw-semibold" href="#"><span data-bn>অভিযোগের অবস্থা
+                            দেখুন</span><span data-en>Track Complaint</span></a>
+                    <a class="btn btn-ghost rounded-pill fw-semibold" href="#"><span data-bn>পরামর্শ
+                            দিন</span><span data-en>Give Feedback</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="py-5 bg-soft-gray" id="about">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-7">
+                    <h2 class="fw-bold" data-bn>ঢাকা উত্তর সিটি কর্পোরেশন সম্পর্কে</h2>
+                    <h2 class="fw-bold" data-en>About DNCC</h2>
+                    <p class="text-muted" data-bn>ঢাকা উত্তর সিটি কর্পোরেশন রাজধানীর উত্তরাংশের নাগরিক সেবা, নগর
+                        পরিকল্পনা ও স্থানীয় সরকার কার্যক্রম পরিচালনা করে। সংস্থাটি জোন ও ওয়ার্ড ভিত্তিক প্রশাসনিক
+                        কাঠামোর মাধ্যমে নাগরিকদের কাছাকাছি সেবা পৌঁছে দিতে কাজ করছে।</p>
+                    <p class="text-muted" data-en>Dhaka North City Corporation administers civic services, urban
+                        planning and local government functions across the northern part of the capital, organised
+                        through a zone- and ward-based administrative structure to bring services closer to citizens.
+                    </p>
+                    <div class="row g-3 mt-2">
+                        <div class="col-6">
+                            <div class="border rounded-3 p-3 bg-white">
+                                <div class="fs-3 fw-bold text-green-deep" data-bn>১০</div>
+                                <div class="fs-3 fw-bold text-green-deep" data-en>10</div>
+                                <div class="text-muted" data-bn>জোন</div>
+                                <div class="text-muted" data-en>Zones</div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="border rounded-3 p-3 bg-white">
+                                <div class="fs-3 fw-bold text-green-deep" data-bn>৫৪</div>
+                                <div class="fs-3 fw-bold text-green-deep" data-en>54</div>
+                                <div class="text-muted" data-bn>ওয়ার্ড</div>
+                                <div class="text-muted" data-en>Wards</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3 d-flex flex-wrap gap-2">
+                        <a class="btn btn-outline-secondary rounded-pill" href="#"><span data-bn>সংগঠন
+                                কাঠামো</span><span data-en>Organizational Structure</span></a>
+                        <a class="btn btn-outline-secondary rounded-pill" href="#"><span data-bn>ওয়ার্ড
+                                ডিরেক্টরি</span><span data-en>Ward Directory</span></a>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="about-map" data-bn>জোন ও ওয়ার্ড মানচিত্র</div>
+                    <div class="about-map" data-en>Zone &amp; Ward Map</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer py-5" id="contact">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="fw-bold fs-5 text-white" data-bn>ঢাকা উত্তর সিটি কর্পোরেশন</div>
+                    <div class="fw-bold fs-5 text-white" data-en>Dhaka North City Corporation</div>
+                    <p class="mt-2" data-bn>নগর ভবন, গুলশান সেন্টার পয়েন্ট, প্লট ২৩–২৬, রোড ৪৬, গুলশান-২, ঢাকা-১২১২
+                    </p>
+                    <p data-en>Nagar Bhaban, Gulshan Center Point, Plot 23–26, Road 46, Gulshan-2, Dhaka-1212</p>
+                    <p data-bn>হটলাইন: ১৬১০৬ | ইমেইল: info@dncc.gov.bd</p>
+                    <p data-en>Hotline: 16106 | Email: info@dncc.gov.bd</p>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h5 class="text-white" data-bn>নাগরিক সেবা</h5>
+                    <h5 class="text-white" data-en>Citizen Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">হোল্ডিং ট্যাক্স</a></li>
+                        <li><a href="#">ট্রেড লাইসেন্স</a></li>
+                        <li><a href="#">জন্ম ও মৃত্যু নিবন্ধন</a></li>
+                        <li><a href="#">বর্জ্য ব্যবস্থাপনা</a></li>
+                        <li><a href="#">নাগরিক সনদ</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h5 class="text-white" data-bn>তথ্য ও নথি</h5>
+                    <h5 class="text-white" data-en>Information &amp; Documents</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">বাজেট ও প্রতিবেদন</a></li>
+                        <li><a href="#">দরপত্র</a></li>
+                        <li><a href="#">আইন ও বিধিমালা</a></li>
+                        <li><a href="#">তথ্য অধিকার</a></li>
+                        <li><a href="#">ফরম ও ডাউনলোড</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h5 class="text-white" data-bn>গুরুত্বপূর্ণ লিংক</h5>
+                    <h5 class="text-white" data-en>Important Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">স্থানীয় সরকার বিভাগ</a></li>
+                        <li><a href="#">বাংলাদেশ জাতীয় পোর্টাল</a></li>
+                        <li><a href="#">জন্ম ও মৃত্যু নিবন্ধন (জাতীয়)</a></li>
+                        <li><a href="#">e-GP</a></li>
+                        <li><a href="#">বিডা</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-light opacity-25 mt-4">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 small">
+                <span data-bn>© ২০২৬ ঢাকা উত্তর সিটি কর্পোরেশন। সর্বস্বত্ব সংরক্ষিত।</span>
+                <span data-en>© 2026 Dhaka North City Corporation. All rights reserved.</span>
+                <div class="d-flex gap-3">
+                    <a href="#" data-bn>গোপনীয়তা নীতি</a><a href="#" data-en>Privacy Policy</a>
+                    <a href="#" data-bn>অ্যাক্সেসিবিলিটি</a><a href="#" data-en>Accessibility</a>
+                    <a href="#" data-bn>সাইটম্যাপ</a><a href="#" data-en>Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ===== DATA & RENDER SCRIPTS (same as before, but using Bootstrap classes) ===== -->
+    <script>
+        function setLang(lang) {
+            document.body.classList.toggle('lang-en', lang === 'en');
+            document.getElementById('btn-bn').classList.toggle('active', lang === 'bn');
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.documentElement.lang = lang;
+        }
+
+        const icon = (paths) =>
+            `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">${paths}</svg>`;
+        const ICONS = {
+            tax: icon('<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h6"/>'),
+            license: icon('<path d="M4 4h16v16H4z"/><path d="M8 9h8M8 13h5"/><circle cx="17" cy="16" r="2"/>'),
+            birth: icon('<path d="M12 2v6M9 8h6l1 4H8l1-4z"/><path d="M6 22v-6a6 6 0 0112 0v6"/>'),
+            waste: icon('<path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/>'),
+            mosquito: icon(
+                '<circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M19 5l-3 3M5 19l3-3M19 19l-3-3"/>'
+            ),
+            health: icon(
+                '<path d="M12 21s-7-4.5-9.5-9C.5 8 2 4 6 4c2 0 4 1.5 6 4 2-2.5 4-4 6-4 4 0 5.5 4 3.5 8-2.5 4.5-9.5 9-9.5 9z"/>'
+            ),
+            charter: icon('<path d="M6 2h9l3 3v17H6z"/><path d="M9 9h6M9 13h6M9 17h4"/>'),
+            form: icon('<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/>'),
+            road: icon('<path d="M8 2L4 22M16 2l4 20M12 6v2M12 12v2M12 18v2"/>'),
+            drain: icon(
+                '<path d="M4 6h16M4 12h16M4 18h16"/><circle cx="8" cy="6" r="1"/><circle cx="16" cy="12" r="1"/><circle cx="8" cy="18" r="1"/>'
+            ),
+            light: icon(
+                '<path d="M9 18h6M10 22h4M12 2a6 6 0 00-4 10.5c.6.6 1 1.5 1 2.5h6c0-1 .4-1.9 1-2.5A6 6 0 0012 2z"/>'
+            ),
+            park: icon('<path d="M12 2l4 6h-3v4h4l-5 6-5-6h4v-4H8z"/>'),
+            cemetery: icon('<path d="M12 2v20M8 6h8M6 22h12"/>'),
+            civic: icon('<path d="M3 21h18M5 21V10l7-6 7 6v11M9 21v-6h6v6"/>'),
+            doc: icon(
+                '<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/>'
+            ),
+            bell: icon('<path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 01-3.4 0"/>'),
+            gavel: icon('<path d="M14 5l5 5M2 22l7-7M9 8l7 7-2 2-7-7z"/>'),
+            budget: icon('<path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/>'),
+            info: icon('<circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/>')
+        };
+
+        // Services
+        const services = [{
+                icon: 'tax',
+                bn: 'হোল্ডিং ট্যাক্স',
+                bnDesc: 'হোল্ডিং কর সংক্রান্ত তথ্য ও অনলাইন পরিশোধ।',
+                en: 'Holding Tax',
+                enDesc: 'Holding tax information and online payment.'
+            },
+            {
+                icon: 'license',
+                bn: 'ট্রেড লাইসেন্স',
+                bnDesc: 'নতুন ও নবায়ন ট্রেড লাইসেন্স আবেদন।',
+                en: 'Trade License',
+                enDesc: 'Apply for new or renewed trade licenses.'
+            },
+            {
+                icon: 'birth',
+                bn: 'জন্ম ও মৃত্যু নিবন্ধন',
+                bnDesc: 'জন্ম ও মৃত্যু সনদের জন্য আবেদন করুন।',
+                en: 'Birth &amp; Death Registration',
+                enDesc: 'Apply for birth and death certificates.'
+            },
+            {
+                icon: 'waste',
+                bn: 'বর্জ্য ব্যবস্থাপনা',
+                bnDesc: 'বাড়ি ও এলাকাভিত্তিক বর্জ্য অপসারণ সেবা।',
+                en: 'Waste Management',
+                enDesc: 'Household and area-based waste collection.'
+            },
+            {
+                icon: 'mosquito',
+                bn: 'মশক নিয়ন্ত্রণ',
+                bnDesc: 'মশক নিধন কার্যক্রম ও অভিযোগ জানান।',
+                en: 'Mosquito Control',
+                enDesc: 'Report issues and view control activities.'
+            },
+            {
+                icon: 'health',
+                bn: 'স্বাস্থ্যসেবা',
+                bnDesc: 'নগর স্বাস্থ্যকেন্দ্র ও টিকাদান কর্মসূচি।',
+                en: 'Health Services',
+                enDesc: 'Urban health centres and vaccination programs.'
+            },
+            {
+                icon: 'charter',
+                bn: 'নাগরিক সনদ',
+                bnDesc: 'সেবা, সময়সীমা ও ফি সংক্রান্ত তথ্য।',
+                en: 'Citizen Charter',
+                enDesc: 'Service standards, timelines and fees.'
+            },
+            {
+                icon: 'form',
+                bn: 'ফরম ও ডাউনলোড',
+                bnDesc: 'প্রয়োজনীয় সকল সরকারি ফরম এক জায়গায়।',
+                en: 'Forms &amp; Downloads',
+                enDesc: 'All official forms in one place.'
+            }
+        ];
+        document.getElementById('service-grid').innerHTML = services.map(s => `
+        <div class="col-md-6 col-lg-3">
+            <div class="service-card border rounded-4 p-3 h-100 bg-white">
+                <div class="service-icon bg-green-soft text-green-deep rounded-3 d-inline-flex p-2 mb-3">${ICONS[s.icon]}</div>
+                <h5 class="fw-bold" data-bn>${s.bn}</h5><h5 class="fw-bold" data-en>${s.en}</h5>
+                <p class="text-muted small" data-bn>${s.bnDesc}</p><p class="text-muted small" data-en>${s.enDesc}</p>
+                <a class="fw-bold text-green-deep text-decoration-none" href="#"><span data-bn>বিস্তারিত দেখুন</span><span data-en>View details</span> →</a>
+            </div>
+        </div>`).join('');
+
+        // Notice tabs
+        const noticeCats = [{
+            bn: 'সব',
+            en: 'All'
+        }, {
+            bn: 'নোটিশ',
+            en: 'Notices'
+        }, {
+            bn: 'অফিস আদেশ',
+            en: 'Office Orders'
+        }, {
+            bn: 'নিয়োগ',
+            en: 'Recruitment'
+        }, {
+            bn: 'দরপত্র',
+            en: 'Tenders'
+        }, {
+            bn: 'প্রজ্ঞাপন',
+            en: 'Circulars'
+        }];
+        document.getElementById('noticeTabs').innerHTML = noticeCats.map((c, i) => `
+        <li class="nav-item" role="presentation">
+            <button class="nav-link ${i===0?'active':''} border-0 rounded-pill px-3" data-bs-toggle="tab" type="button">${c.bn}</button>
+        </li>`).join('');
+
+        // Notice list
+        const notices = [{
+                icon: 'bell',
+                cat_bn: 'নোটিশ',
+                cat_en: 'Notice',
+                bn: 'হোল্ডিং ট্যাক্স পরিশোধের সময়সীমা সংক্রান্ত জরুরি বিজ্ঞপ্তি',
+                en: 'Urgent notice regarding holding tax payment deadline',
+                date_bn: '০৮ আগস্ট ২০২৬',
+                date_en: 'August 8, 2026',
+                isNew: true
+            },
+            {
+                icon: 'gavel',
+                cat_bn: 'দরপত্র',
+                cat_en: 'Tender',
+                bn: 'সড়ক সংস্কার কাজের জন্য দরপত্র আহ্বান',
+                en: 'Tender notice for road repair works',
+                date_bn: '০৭ আগস্ট ২০২৬',
+                date_en: 'August 7, 2026',
+                isNew: true
+            },
+            {
+                icon: 'doc',
+                cat_bn: 'অফিস আদেশ',
+                cat_en: 'Office Order',
+                bn: 'কর্মকর্তা-কর্মচারীদের বদলি সংক্রান্ত আদেশ',
+                en: 'Office order on staff transfer',
+                date_bn: '০৬ আগস্ট ২০২৬',
+                date_en: 'August 6, 2026',
+                isNew: false
+            },
+            {
+                icon: 'bell',
+                cat_bn: 'নিয়োগ',
+                cat_en: 'Recruitment',
+                bn: 'বিভিন্ন পদে জনবল নিয়োগ বিজ্ঞপ্তি',
+                en: 'Recruitment notice for various positions',
+                date_bn: '০৪ আগস্ট ২০২৬',
+                date_en: 'August 4, 2026',
+                isNew: false
+            },
+            {
+                icon: 'gavel',
+                cat_bn: 'প্রজ্ঞাপন',
+                cat_en: 'Circular',
+                bn: 'নাগরিক সেবা প্রদানের সময়সূচি পরিবর্তন সংক্রান্ত প্রজ্ঞাপন',
+                en: 'Circular on revised citizen service hours',
+                date_bn: '০২ আগস্ট ২০২৬',
+                date_en: 'August 2, 2026',
+                isNew: false
+            }
+        ];
+        document.getElementById('notice-list').innerHTML = notices.map(n => `
+        <div class="list-group-item d-flex flex-wrap align-items-center gap-2 py-3">
+            <div class="notice-icon bg-lavender text-indigo rounded-3 d-flex align-items-center justify-content-center" style="width:38px;height:38px;">${ICONS[n.icon]}</div>
+            <div class="flex-grow-1">
+                <div class="notice-cat small fw-bold text-indigo"><span data-bn>${n.cat_bn}</span><span data-en>${n.cat_en}</span>${n.isNew?'<span class="badge-new">NEW</span>':''}</div>
+                <div class="notice-title fw-semibold"><span data-bn>${n.bn}</span><span data-en>${n.en}</span></div>
+            </div>
+            <div class="notice-date text-muted small"><span data-bn>${n.date_bn}</span><span data-en>${n.date_en}</span></div>
+        </div>`).join('');
+
+        // News
+        const news = [{
+                cat_bn: 'সংবাদ',
+                cat_en: 'News',
+                date_bn: '০৮ আগস্ট ২০২৬',
+                date_en: 'Aug 8, 2026',
+                bn: 'নতুন পার্ক উদ্বোধন করলেন প্রশাসক',
+                en: 'Administrator inaugurates new city park',
+                pbn: 'অঞ্চল-৩ এলাকায় নতুন একটি আধুনিক পার্কের উদ্বোধন করা হয়েছে।',
+                pen: 'A new modern park was inaugurated in Zone-3.'
+            },
+            {
+                cat_bn: 'উদ্যোগ',
+                cat_en: 'Initiative',
+                date_bn: '০৬ আগস্ট ২০২৬',
+                date_en: 'Aug 6, 2026',
+                bn: 'বর্ষা মৌসুমে বিশেষ মশক নিধন কার্যক্রম শুরু',
+                en: 'Special mosquito control drive begins for monsoon',
+                pbn: 'পুরো সিটি কর্পোরেশন এলাকায় কার্যক্রম পরিচালিত হচ্ছে।',
+                pen: 'The campaign is being carried out across the corporation area.'
+            },
+            {
+                cat_bn: 'সেবা',
+                cat_en: 'Service',
+                date_bn: '০৩ আগস্ট ২০২৬',
+                date_en: 'Aug 3, 2026',
+                bn: 'হোল্ডিং ট্যাক্স অনলাইন পরিশোধ সেবা সম্প্রসারণ',
+                en: 'Online holding tax payment service expanded',
+                pbn: 'আরও বেশি নাগরিক এখন ঘরে বসেই কর পরিশোধ করতে পারবেন।',
+                pen: 'More citizens can now pay taxes from home.'
+            }
+        ];
+        document.getElementById('news-grid').innerHTML = news.map(n => `
+        <div class="col-md-6 col-lg-4">
+            <div class="news-card border rounded-4 overflow-hidden bg-white h-100">
+                <div class="news-thumb bg-light d-flex align-items-center justify-content-center py-4">${ICONS.civic}</div>
+                <div class="p-3">
+                    <span class="news-cat small fw-bold text-green-deep"><span data-bn>${n.cat_bn}</span><span data-en>${n.cat_en}</span></span>
+                    <span class="news-date text-muted small"> · <span data-bn>${n.date_bn}</span><span data-en>${n.date_en}</span></span>
+                    <h5 class="fw-bold mt-1"><span data-bn>${n.bn}</span><span data-en>${n.en}</span></h5>
+                    <p class="text-muted small"><span data-bn>${n.pbn}</span><span data-en>${n.pen}</span></p>
+                </div>
+            </div>
+        </div>`).join('');
+
+        // Civic ops
+        const civicOps = [{
+                icon: 'waste',
+                bn: 'বর্জ্য ব্যবস্থাপনা',
+                en: 'Waste Management',
+                pbn: 'নিয়মিত বাড়ি বাড়ি বর্জ্য সংগ্রহ কার্যক্রম।',
+                pen: 'Regular door-to-door waste collection.'
+            },
+            {
+                icon: 'mosquito',
+                bn: 'মশক নিয়ন্ত্রণ',
+                en: 'Mosquito Control',
+                pbn: 'এডিস মশা নিধনে নিয়মিত অভিযান।',
+                pen: 'Regular drives against Aedes mosquitoes.'
+            },
+            {
+                icon: 'road',
+                bn: 'রাস্তা ও অবকাঠামো',
+                en: 'Roads &amp; Infrastructure',
+                pbn: 'সড়ক সংস্কার ও রক্ষণাবেক্ষণ।',
+                pen: 'Road repair and maintenance work.'
+            },
+            {
+                icon: 'drain',
+                bn: 'ড্রেনেজ',
+                en: 'Drainage',
+                pbn: 'জলাবদ্ধতা নিরসনে ড্রেন পরিষ্কার কার্যক্রম।',
+                pen: 'Drain clearing to prevent waterlogging.'
+            },
+            {
+                icon: 'light',
+                bn: 'সড়কবাতি',
+                en: 'Street Lighting',
+                pbn: 'সড়কবাতি স্থাপন ও মেরামত সেবা।',
+                pen: 'Installation and repair of street lights.'
+            },
+            {
+                icon: 'park',
+                bn: 'পার্ক ও উন্মুক্ত স্থান',
+                en: 'Parks &amp; Open Spaces',
+                pbn: 'নাগরিকদের জন্য সবুজ ও উন্মুক্ত স্থান রক্ষণাবেক্ষণ।',
+                pen: 'Maintenance of green and open public spaces.'
+            },
+            {
+                icon: 'health',
+                bn: 'জনস্বাস্থ্য',
+                en: 'Public Health',
+                pbn: 'নগর স্বাস্থ্যকেন্দ্র ও টিকাদান সেবা।',
+                pen: 'Urban health centres and immunization.'
+            },
+            {
+                icon: 'cemetery',
+                bn: 'কবরস্থান ব্যবস্থাপনা',
+                en: 'Cemetery Management',
+                pbn: 'স্মার্ট কবরস্থান তথ্য ও সেবা।',
+                pen: 'Smart cemetery information and services.'
+            }
+        ];
+        document.getElementById('civic-grid').innerHTML = civicOps.map(c => `
+        <div class="col-sm-6 col-lg-3">
+            <div class="civic-card border rounded-4 p-3 bg-white h-100 d-flex gap-3">
+                <div class="civic-icon bg-green-soft text-green-deep rounded-3 d-flex align-items-center justify-content-center flex-shrink-0" style="width:40px;height:40px;">${ICONS[c.icon]}</div>
+                <div><h6 class="fw-bold"><span data-bn>${c.bn}</span><span data-en>${c.en}</span></h6><p class="small text-muted"><span data-bn>${c.pbn}</span><span data-en>${c.pen}</span></p></div>
+            </div>
+        </div>`).join('');
+
+        // Projects
+        const projects = [{
+                status: 'ongoing',
+                sbn: 'চলমান',
+                sen: 'Ongoing',
+                bn: 'উত্তরা ৪র্থ পর্যায় জলাবদ্ধতা নিরসন প্রকল্প',
+                en: 'Uttara Phase-4 Waterlogging Mitigation Project',
+                loc_bn: 'উত্তরা, জোন-৪',
+                loc_en: 'Uttara, Zone 4',
+                pbn: 'বর্ষা মৌসুমে জলাবদ্ধতা কমাতে ড্রেনেজ নেটওয়ার্ক সম্প্রসারণ।',
+                pen: 'Expanding drainage network to reduce monsoon waterlogging.'
+            },
+            {
+                status: 'done',
+                sbn: 'সম্পন্ন',
+                sen: 'Completed',
+                bn: 'মিরপুর সড়ক প্রশস্তকরণ কর্মসূচি',
+                en: 'Mirpur Road Widening Programme',
+                loc_bn: 'মিরপুর, জোন-৬',
+                loc_en: 'Mirpur, Zone 6',
+                pbn: 'যানজট নিরসনে প্রধান সড়ক প্রশস্তকরণ সম্পন্ন হয়েছে।',
+                pen: 'Main road widening completed to ease traffic congestion.'
+            },
+            {
+                status: 'planned',
+                sbn: 'পরিকল্পনাধীন',
+                sen: 'Planned',
+                bn: 'গুলশান সবুজায়ন ও পার্ক উন্নয়ন প্রকল্প',
+                en: 'Gulshan Greening &amp; Park Development Project',
+                loc_bn: 'গুলশান, জোন-৩',
+                loc_en: 'Gulshan, Zone 3',
+                pbn: 'নতুন পার্ক ও সবুজ এলাকা তৈরির পরিকল্পনা।',
+                pen: 'Planned development of new parks and green spaces.'
+            }
+        ];
+        document.getElementById('project-grid').innerHTML = projects.map(p => `
+        <div class="col-md-6 col-lg-4">
+            <div class="project-card border rounded-4 overflow-hidden bg-white h-100">
+                <div class="project-thumb bg-light d-flex align-items-center justify-content-center py-3">${ICONS.civic}</div>
+                <div class="p-3">
+                    <span class="status-pill status-${p.status}"><span data-bn>${p.sbn}</span><span data-en>${p.sen}</span></span>
+                    <h5 class="fw-bold mt-1"><span data-bn>${p.bn}</span><span data-en>${p.en}</span></h5>
+                    <div class="text-muted small"><span data-bn>${p.loc_bn}</span><span data-en>${p.loc_en}</span></div>
+                    <p class="text-muted small mt-1"><span data-bn>${p.pbn}</span><span data-en>${p.pen}</span></p>
+                </div>
+            </div>
+        </div>`).join('');
+
+        // Transparency
+        const transparency = [{
+                icon: 'budget',
+                bn: 'বাজেট',
+                en: 'Budget'
+            },
+            {
+                icon: 'doc',
+                bn: 'বার্ষিক প্রতিবেদন',
+                en: 'Annual Report'
+            },
+            {
+                icon: 'civic',
+                bn: 'প্রকল্প',
+                en: 'Projects'
+            },
+            {
+                icon: 'gavel',
+                bn: 'দরপত্র',
+                en: 'Tenders'
+            },
+            {
+                icon: 'info',
+                bn: 'তথ্য অধিকার',
+                en: 'Right to Information'
+            },
+            {
+                icon: 'charter',
+                bn: 'সিটিজেন চার্টার',
+                en: 'Citizen Charter'
+            },
+            {
+                icon: 'gavel',
+                bn: 'আইন ও বিধিমালা',
+                en: 'Laws &amp; Regulations'
+            },
+            {
+                icon: 'bell',
+                bn: 'শুদ্ধাচার',
+                en: 'Integrity Strategy'
+            }
+        ];
+        document.getElementById('transparency-grid').innerHTML = transparency.map(t => `
+        <div class="col-sm-6 col-lg-3">
+            <a class="transparency-link border rounded-4 p-3 bg-white d-flex align-items-center gap-3 text-decoration-none" href="#">
+                <span class="ico bg-lavender text-indigo rounded-3 d-flex align-items-center justify-content-center" style="width:36px;height:36px;">${ICONS[t.icon]}</span>
+                <span class="fw-semibold"><span data-bn>${t.bn}</span><span data-en>${t.en}</span></span>
+            </a>
+        </div>`).join('');
+    </script>
+</body>
+
+</html>
