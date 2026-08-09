@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>হাজীগঞ্জ পৌরসভা | Bootstrap 5</title>
+    <title>হাজীগঞ্জ পৌরসভা </title>
     <!-- Bootstrap 5.3.2 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -355,14 +355,12 @@
                     <ul class="navbar-nav d-none d-lg-flex align-items-center gap-1 gap-lg-2">
                         <!-- ডান পাশের বাটন -->
                         <li class="nav-item d-none d-lg-block">
-                            <a class="btn btn-outline-secondary rounded-pill px-3 fw-semibold" href="#"><i
-                                    class="bi bi-person me-1"></i><span data-bn>নাগরিক পোর্টাল</span><span
+                            <a class="btn btn-outline-secondary rounded-pill px-3 fw-semibold" href="#"><span data-bn>নাগরিক পোর্টাল</span><span
                                     data-en>Citizen
                                     Portal</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn btn-success rounded-pill px-3 fw-semibold" href="#"><i
-                                    class="bi bi-globe2 me-1"></i><span data-bn>অনলাইন সেবা</span><span data-en>Online
+                            <a class="btn btn-success rounded-pill px-3 fw-semibold" href="#"><span data-bn>অনলাইন সেবা</span><span data-en>Online
                                     Services</span></a>
                         </li>
                     </ul>
@@ -379,7 +377,7 @@
 
                         <!-- হোম -->
                         <li class="nav-item">
-                            <a class="nav-link fw-semibold" href="#"><i class="bi bi-house-fill me-1"></i><span
+                            <a class="nav-link fw-semibold" href="#"><span
                                     data-bn>হোম</span><span data-en>Home</span></a>
                         </li>
 
@@ -387,28 +385,23 @@
                         <li class="nav-item dropdown dropdown-hover">
                             <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-info-circle me-1"></i><span data-bn>পৌরসভা তথ্য</span><span
+                                <span data-bn>পৌরসভা তথ্য</span><span
                                     data-en>About
                                     Us</span>
                             </a>
                             <ul class="dropdown-menu shadow-sm border-0 rounded-4 py-2">
-                                <li><a class="dropdown-item" href="https://hajigonjpoura.org/unioncouncilinformation"><i
-                                            class="bi bi-clock-history me-2 text-success"></i><span data-bn>পৌরসভার
+                                <li><a class="dropdown-item" href="https://hajigonjpoura.org/unioncouncilinformation"><span data-bn>পৌরসভার
                                             সংক্ষিপ্ত বিবরণ</span><span data-en>Brief History</span></a></li>
-                                <li><a class="dropdown-item" href="https://comillaboard.portal.gov.bd/"><i
-                                            class="bi bi-book me-2 text-success"></i><span data-bn>শিক্ষা বিষয়ক
+                                <li><a class="dropdown-item" href="https://comillaboard.portal.gov.bd/"><span data-bn>শিক্ষা বিষয়ক
                                             তথ্য</span><span data-en>Education Info</span></a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#"><i
-                                            class="bi bi-geo-alt me-2 text-success"></i><span data-bn>লোকেশন ও
+                                <li><a class="dropdown-item" href="#"><span data-bn>লোকেশন ও
                                             আয়তন</span><span data-en>Location &amp; Area</span></a></li>
-                                <li><a class="dropdown-item" href="#"><i
-                                            class="bi bi-diagram-3 me-2 text-success"></i><span data-bn>সাংগঠনিক
+                                <li><a class="dropdown-item" href="#"><span data-bn>সাংগঠনিক
                                             কাঠামো</span><span data-en>Organogram</span></a></li>
-                                <li><a class="dropdown-item" href="#"><i
-                                            class="bi bi-people me-2 text-success"></i><span
+                                <li><a class="dropdown-item" href="#"><span
                                             data-bn>কর্মকর্তাবৃন্দ</span><span data-en>Officers</span></a></li>
                             </ul>
                         </li>
@@ -417,7 +410,7 @@
                         <li class="nav-item dropdown dropdown-hover">
                             <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-pencil-square me-1"></i>
+                                
                                 <span data-bn>আবেদন করুন</span>
                                 <span data-en>Apply</span>
                             </a>
@@ -471,7 +464,7 @@
                         <li class="nav-item dropdown dropdown-hover">
                             <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-files me-1"></i>
+                                
                                 <span data-bn>অন্যান্য আবেদন</span>
                                 <span data-en>Other Applications</span>
                             </a>
@@ -699,7 +692,6 @@
                         <li class="nav-item dropdown dropdown-hover">
                             <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-graph-up-arrow me-1"></i>
                                 <span data-bn>উন্নয়নমূলক প্রকল্প</span>
                                 <span data-en>Development Projects</span>
                             </a>
@@ -781,13 +773,12 @@
                         <li class="nav-item dropdown dropdown-hover">
                             <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-person-badge me-1"></i>
                                 <span data-bn>পেশাজীবী সমিতি</span>
                                 <span data-en>Professional Associations</span>
                             </a>
                             <ul class="dropdown-menu shadow-sm border-0 rounded-4 py-2" style="min-width: 350px;">
                                 <li>
-                                    <a class="dropdown-item" href="{{route('form')}}">
+                                    <a class="dropdown-item" href="{{route('fishermanform')}}">
                                         <i class="bi bi-fish me-2 text-success"></i>
                                         <span data-bn>মৎস্যজীবী সমবায় সমিতি সদস্য পদের জন্য আবেদন</span>
                                         <span data-en>Fishermen Cooperative Association Membership Application</span>
@@ -827,7 +818,6 @@
                         <!-- দুর্ঘটনার তথ্যাদি (সরাসরি লিংক) -->
                         <li class="nav-item">
                             <a class="nav-link fw-semibold" href="#">
-                                <i class="bi bi-exclamation-triangle me-1"></i>
                                 <span data-bn>দুর্ঘটনার তথ্যাদি</span>
                                 <span data-en>Accident Information</span>
                             </a>
@@ -835,7 +825,6 @@
                         <!-- সালিশ কার্যক্রমের তথ্যাদি (সরাসরি লিংক) -->
                         <li class="nav-item">
                             <a class="nav-link fw-semibold" href="#">
-                                <i class="bi bi-scale me-1"></i>
                                 <span data-bn>সালিশ কার্যক্রমের তথ্যাদি</span>
                                 <span data-en>Arbitration Information</span>
                             </a>
@@ -844,7 +833,6 @@
                         <!-- যাচাই করুন (সরাসরি লিংক) -->
                         <li class="nav-item">
                             <a class="nav-link fw-semibold" href="https://hajigonjpoura.org/verify">
-                                <i class="bi bi-check-circle me-1"></i>
                                 <span data-bn>যাচাই করুন</span>
                                 <span data-en>Verify</span>
                             </a>
