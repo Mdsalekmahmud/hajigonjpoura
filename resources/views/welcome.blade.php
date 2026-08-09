@@ -677,7 +677,7 @@
                                     </a>
 
                                     <div class="mega-menu-dropdown megaMenu">
-                                        <!-- প্রথম কলাম -->
+                                        
                                         <div class="menu-child-box">
                                             <h6 class="menu-child-title">
                                                 <a href="#">
@@ -725,7 +725,7 @@
                                             </ul>
                                         </div>
 
-                                        <!-- দ্বিতীয় কলাম -->
+                                       
                                         <div class="menu-child-box">
                                             <h6 class="menu-child-title">
                                                 <a href="#">
@@ -773,7 +773,6 @@
                                             </ul>
                                         </div>
 
-                                        <!-- তৃতীয় কলাম -->
                                         <div class="menu-child-box">
                                             <h6 class="menu-child-title">
                                                 <a href="#">
@@ -821,7 +820,6 @@
                                             </ul>
                                         </div>
 
-                                        <!-- চতুর্থ কলাম -->
                                         <div class="menu-child-box">
                                             <h6 class="menu-child-title">
                                                 <a href="#">
@@ -904,7 +902,7 @@
                                         </div>
 
                                         <!-- দ্বিতীয় কলাম -->
-                                        <div class="menu-child-box">
+                                        <d iv class="menu-child-box">
                                             <h6 class="menu-child-title">
                                                 <a href="#">
                                                     <div>নিরাপত্তা ও পরিবেশ</div>
@@ -927,6 +925,41 @@
                                                         <div>ভূগর্ভস্থ বিদ্যুৎ ও ইন্টারনেট কেবল প্রকল্প</div>
                                                     </a>
                                                 </li>
+                                            </ul>
+                                        </d>
+                                    </div>
+                                </li>
+                                <li class="megamenu-link menu-parent-list"> <a title=" পেশাজীবী সমিতি " href="#"
+                                        class="menu-parent-list-link"> পেশাজীবী সমিতি  <icon
+                                            class="menu-parent-list-link-icon ph ph-caret-double-down"></icon> </a>
+                                    <div class="mega-menu-dropdown megaMenu">
+                                        <div class="menu-child-box ">
+                                            <h6 title=" " class="menu-child-title"> <a title=" "
+                                                    href="#">
+                                                    <div> </div>
+                                                </a> </h6>
+                                            <ul class="menu-sub-child-unordered-list"
+                                                aria-labelledby="mega-menu-dropdown-button">
+                                                <li class="menu-sub-child-list"> <a title=" মৎস্যজীবী সমবায় সমিতি সদস্য পদের জন্য আবেদন"
+                                                        class="menu-sub-child-link" href="pages/forms.html">
+                                                        <div>মৎস্যজীবী সমবায় সমিতি সদস্য পদের জন্য আবেদন</div>
+                                                    </a> </li>
+                                                <li class="menu-sub-child-list"> <a title=" কৃষিজীবী সমবায় সমিতি সদস্য পদের জন্য আবেদন"
+                                                        class="menu-sub-child-link" href="#">
+                                                        <div>কৃষিজীবী সমবায় সমিতি সদস্য পদের জন্য আবেদন</div>
+                                                    </a> </li>
+                                                <li class="menu-sub-child-list"> <a title=" বাজার ব্যবস্থাপনা সমিতি সদস্য পদের জন্য আবেদন"
+                                                        class="menu-sub-child-link" href="#">
+                                                        <div>বাজার ব্যবস্থাপনা সমিতি সদস্য পদের জন্য আবেদন</div>
+                                                    </a> </li>
+                                                    <li class="menu-sub-child-list"> <a title=" শিল্পকারখানা সমবায় সমিতি সদস্য পদের জন্য আবেদন"
+                                                        class="menu-sub-child-link" href="#">
+                                                        <div>শিল্পকারখানা সমবায় সমিতি সদস্য পদের জন্য আবেদন</div>
+                                                    </a> </li>
+                                                    <li class="menu-sub-child-list"> <a title=" পশুপালক ও খামারি সমিতি সমবায় সমিতি সদস্য পদের জন্য আবেদন"
+                                                        class="menu-sub-child-link" href="#">
+                                                        <div>পশুপালক ও খামারি সমিতি সমবায় সমিতি সদস্য পদের জন্য আবেদন</div>
+                                                    </a> </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -974,6 +1007,10 @@
                                 </li>
                                 <li class="megamenu-link menu-parent-list"> <a title=" সালিশ কার্যক্রমের তথ্যাদি "
                                         href="#" class="menu-parent-list-link"> সালিশ কার্যক্রমের তথ্যাদি<icon
+                                            class="menu-parent-list-link-icon ph ph-caret-double-down"></icon> </a>
+                                </li>
+                                <li class="megamenu-link menu-parent-list"> <a title=" যাচাই করুন "
+                                        href="https://hajigonjpoura.org/verify" class="menu-parent-list-link"> যাচাই করুন<icon
                                             class="menu-parent-list-link-icon ph ph-caret-double-down"></icon> </a>
                                 </li>
                                 {{-- <li class="megamenu-link menu-parent-list"> <a title=" ফরম" href="#"
@@ -1442,7 +1479,7 @@
                                 স্বাগতম</div>
                             <div class="block-widget-content">
                                 {{-- <rt-renderer encoded-content="PG1hcnF1ZWUgZGlyZWN0aW9uPSJsZWZ0IiBzY3JvbGxhbW91bnQ9IjciICJ0aGlzLnN0b3AoKSIgInRoaXMuc3RhcnQoKSI+PHA+PHNwYW4gc3R5bGU9ImNvbG9yOnJnYigwLCAwLCAwKSI+Kirgpqzgpr/gpqbgp43gpq/gpq7gpr7gpqgg4Kah4KeH4KaZ4KeN4KaX4KeBIOCmquCmsOCmv+CmuOCnjeCmpeCmv+CmpOCmv+CmpOCnh8Kg4Kah4KeH4KaZ4KeN4KaX4KeBIOCmuOCmguCmleCnjeCmsOCmvuCmqOCnjeCmpCDgpqrgprDgpr7gpq7gprDgp43gprYg4KaTIOCmquCmsOCngOCmleCnjeCmt+CmvuCmsCDgppzgpqjgp43gpq8g4Kah4Ka/4KaP4Kao4Ka44Ka/4Ka44Ka/4oCZ4KawIOCmleCmqOCnjeCmn+CnjeCmsOCni+CmsiDgprDgp4Hgpq7gp4cg4Kav4KeL4KaX4Ka+4Kav4KeL4KaX4KeH4KawIOCmnOCmqOCnjeCmryDgpoXgpqjgp4HgprDgp4vgpqcg4KaV4Kaw4Ka+IOCmueCmsuCni+ClpMKg4KaV4Kao4KeN4Kaf4KeN4Kaw4KeL4KayIOCmsOCngeCmruCnh+CmsCDgpqvgp4vgpqgg4Kao4Kau4KeN4Kas4Kaw4KaDIOCnpuCnp+CnreCnp+CnrC3gp6bgp6zgp6ngp6rgp6jgp6ssIOCnpuCnp+CnreCnreCnqS3gp6ngp6/gp6ngp6jgp63gp6wsIOCnpuCnp+CnreCnp+Cnqy3gp6jgp6ngp67gp63gp6vgp6oqKsKgPC9zcGFuPjxzcGFuIHN0eWxlPSJjb2xvcjpyZ2IoMCwgMTI4LCAwKSI+4Kah4KeH4KaZ4KeN4KaX4KeBPC9zcGFuPjxzcGFuIHN0eWxlPSJjb2xvcjpyZ2IoMCwgMTAwLCAwKSI+IOCmqOCmv+Cnn+CmqOCnjeCmpOCnjeCmsOCmo+CnhyDgppXgprDgpqjgp4Dgp58g4Ka44KaC4KaV4KeN4Kaw4Ka+4Kao4KeN4KakIOCmoeCmv+Cmj+CmqOCmuOCmv+CmuOCmvyfgprAg4Ka54Kaf4Kay4Ka+4KaH4KaoIOCmqOCmruCnjeCmrOCmsCA8L3NwYW4+PHNwYW4gc3R5bGU9ImNvbG9yOnJnYigwLCAyNTUsIDApIj4o4KenKcKgPC9zcGFuPuCmrOCnjeCmsOCmv+Cml+Cnh+CmgyDgppzgp4fgpqjgpr7gprDgp4fgprIg4KaH4Kau4Kaw4KeB4KayIOCmleCmvuCnn+Cnh+CmuCDgpprgp4zgpqfgp4HgprDgp4A8c3BhbiBzdHlsZT0iY29sb3I6cmdiKDAsIDI1NSwgMCkiPi08L3NwYW4+4Kem4Ken4Ket4Ken4KesLeCnpuCnrOCnqeCnquCnqOCnqyw8c3BhbiBzdHlsZT0iY29sb3I6cmdiKDAsIDI1NSwgMCkiPsKgKOCnqCnCoOCmoeCmvuCmgyDgpq7gp4vgprngpr7gpq7gp43gpq7gpqYg4Kay4KeB4KeO4Kar4KawIOCmsOCmueCmruCmvuCmqC3CoDAxNTIxMjA5NjQ1wqAo4KepKcKg4Kah4Ka+4KaDIOCmruCni+CmgyDgpofgpq7gpqbgpr7gpqbgp4HgprIg4Ka54KaVLTAxNzE1LTIzODc1NCwgKOCnqinCoOCmleCng+Cmt+Cmv+CmrOCmv+CmpiDgpq7gp4vgpoMg4KaG4Ka44Ka/4KarIOCmh+CmleCmrOCmvuCmsi0wMTcxNTQzNjkwNSw8L3NwYW4+wqA8c3BhbiBzdHlsZT0iY29sb3I6cmdiKDI1NSwgMCwgMCkiPijgp6sp4Kah4Ka+LiDgpq7gpr7gpqzgpr/gp5/gpr4g4Ka44KeB4Kay4Kak4Ka+4Kao4Ka+IOCmtuCni+CmreCmvi08L3NwYW4+PHNwYW4gc3R5bGU9ImNvbG9yOnJnYigyNTUsIDAsIDApOyBmb250LWZhbWlseTprYWxwdXJ1c2hyZWd1bGFyOyBmb250LXNpemU6MTRweCI+MDE1MjE0OTU1MjA8L3NwYW4+PHNwYW4gc3R5bGU9ImNvbG9yOnJnYigyNTUsIDAsIDApIj48c3BhbiBzdHlsZT0iZm9udC1mYW1pbHk6a2FscHVydXNocmVndWxhcjsgZm9udC1zaXplOjE0cHgiPiwg4KaF4Kae4KeN4Kaa4KayLeCnpywgKOCnrCnCoDwvc3Bhbj7gpqHgpr4uIOCmruCni+CmueCmvuCmruCnjeCmruCmpiDgprjgpr7gpqbgpq7gpr7gpqjCoCDgprjgpr7gppXgpr/gpqwtPC9zcGFuPjxzcGFuIHN0eWxlPSJjb2xvcjpyZ2IoMjU1LCAwLCAwKTsgZm9udC1mYW1pbHk6a2FscHVydXNocmVndWxhcjsgZm9udC1zaXplOjE0cHgiPjAxNzU5OTQyNDE0PC9zcGFuPjxzcGFuIHN0eWxlPSJjb2xvcjpyZ2IoMjU1LCAwLCAwKSI+PHNwYW4gc3R5bGU9ImZvbnQtZmFtaWx5OmthbHB1cnVzaHJlZ3VsYXI7IGZvbnQtc2l6ZToxNHB4Ij4swqDgpoXgpp7gp43gpprgprIt4KeoLCAo4KetKcKgPC9zcGFuPjwvc3Bhbj7gpqHgpr7gpoMg4KaG4Kac4Ka/4Kac4KeB4KaoIOCmqOCnh+Cmm+CmvjxzcGFuIHN0eWxlPSJjb2xvcjpyZ2IoMjU1LCAwLCAwKSI+LTwvc3Bhbj7gp6bgp6fgp63gp6vgp6zgp6jgp6bgp6/gp6rgp67gp6g8c3BhbiBzdHlsZT0iY29sb3I6cmdiKDI1NSwgMCwgMCkiPjxzcGFuIHN0eWxlPSJmb250LWZhbWlseTprYWxwdXJ1c2hyZWd1bGFyOyBmb250LXNpemU6MTRweCI+LCDgpoXgpp7gp43gpprgprIt4KepLCAo4KeuKcKgPC9zcGFuPuCmoeCmvuCmgyDgpq7gpr7gprngpq7gp4Hgpqbgpr4g4KaG4Kay4KeALTAxNzE1NDU2Njk4LMKgPHNwYW4gc3R5bGU9ImZvbnQtZmFtaWx5OmthbHB1cnVzaHJlZ3VsYXI7IGZvbnQtc2l6ZToxNHB4Ij7gpoXgpp7gp43gpprgprIt4KeqLDwvc3Bhbj7CoCjgp68pIOCmoeCmvuCmgyDgpo/gprgg4KaP4KauIOCmk+Cnn+CmvuCmuOCmv+CmruCngeCmsiDgpofgprjgprLgpr7gpq4tMDE3MzU4NDM2OTMswqA8c3BhbiBzdHlsZT0iZm9udC1mYW1pbHk6a2FscHVydXNocmVndWxhcjsgZm9udC1zaXplOjE0cHgiPuCmheCmnuCnjeCmmuCmsi3gp6ssICjgp6fgp6YpwqA8L3NwYW4+4Kah4Ka+4KaDIOCmruCni+CmgyDgpqvgpr/gprDgp4fgpr7gppwg4KaG4Kay4KauLTwvc3Bhbj48c3BhbiBzdHlsZT0iY29sb3I6cmdiKDI1NSwgMCwgMCk7IGZvbnQtZmFtaWx5OmthbHB1cnVzaHJlZ3VsYXI7IGZvbnQtc2l6ZToxNHB4Ij4wMTcxNjM5ODg4Njwvc3Bhbj48c3BhbiBzdHlsZT0iY29sb3I6cmdiKDI1NSwgMCwgMCkiPjxzcGFuIHN0eWxlPSJmb250LWZhbWlseTprYWxwdXJ1c2hyZWd1bGFyOyBmb250LXNpemU6MTRweCI+LCDgpoXgpp7gp43gpprgprIt4KesICjgp6fgp6cpPC9zcGFuPuCmoeCmvuCmgyDgpqvgpr7gprDgppzgpr7gpqjgpr4g4KaG4Kar4Kaw4KeL4KacLTwvc3Bhbj48c3BhbiBzdHlsZT0iY29sb3I6cmdiKDI1NSwgMCwgMCk7IGZvbnQtZmFtaWx5OmthbHB1cnVzaHJlZ3VsYXI7IGZvbnQtc2l6ZToxNHB4Ij4wMTc0NDk4OTkwOTwvc3Bhbj48c3BhbiBzdHlsZT0iY29sb3I6cmdiKDI1NSwgMCwgMCkiPjxzcGFuIHN0eWxlPSJmb250LWZhbWlseTprYWxwdXJ1c2hyZWd1bGFyOyBmb250LXNpemU6MTRweCI+LMKg4KaF4Kae4KeN4Kaa4KayLeCnrSAo4Ken4KeoKcKgPC9zcGFuPuCmoeCmvi4g4Kau4Ka+4Kas4Ka/4Kef4Ka+IOCmuOCngeCmsuCmpOCmvuCmqOCmviDgprbgp4vgpq3gpr4tPHNwYW4gc3R5bGU9ImZvbnQtZmFtaWx5OmthbHB1cnVzaHJlZ3VsYXI7IGZvbnQtc2l6ZToxNHB4Ij4wMTUyMTQ5NTUyMCzCoDwvc3Bhbj48c3BhbiBzdHlsZT0iZm9udC1mYW1pbHk6a2FscHVydXNocmVndWxhcjsgZm9udC1zaXplOjE0cHgiPuCmheCmnuCnjeCmmuCmsi3gp64gKOCnp+CnqSnCoDwvc3Bhbj7gpqHgpr4uIOCmuOCnh+CmvuCmqOCmv+Cnn+CmviDgprjgp4HgprLgpqTgpr7gpqjgpr4tPHNwYW4gc3R5bGU9ImZvbnQtZmFtaWx5OmthbHB1cnVzaHJlZ3VsYXI7IGZvbnQtc2l6ZToxNHB4Ij4wMTY3ODcxMzk0OSwg4KaF4Kae4KeN4Kaa4KayLeCnryAo4Ken4KeqKSA8L3NwYW4+4Kah4Ka+4KaDIOCmj+CmuCDgpo/gpq4g4KaT4Kef4Ka+4Ka44Ka/4Kau4KeB4KayIOCmh+CmuOCmsuCmvuCmri0wMTczNTg0MzY5Mywg4KaF4Kae4KeN4Kaa4KayLeCnp+Cnpjwvc3Bhbj48c3BhbiBzdHlsZT0iY29sb3I6cmdiKDAsIDI1NSwgMCkiPjxzcGFuIHN0eWxlPSJmb250LXNpemU6MTRweCI+Kio8L3NwYW4+PC9zcGFuPjxzcGFuIHN0eWxlPSJiYWNrZ3JvdW5kLWNvbG9yOnJnYigyNDUsIDI0NSwgMjQ1KTsgZm9udC1mYW1pbHk6a2FscHVydXNocmVndWxhcjsgZm9udC1zaXplOjE0cHgiPuCmhuCmuOCngeCmqCAi4Ka44KeB4Ka44KeN4Kal4Kak4Ka+4KawIOCmnOCmqOCnjeCmr+CnhyDgprjgpr7gpq7gpr7gppzgpr/gppUg4KaG4Kao4KeN4Kam4KeL4Kay4KaoIOCml+CnnOCnhyDgpqTgp4HgprLgpr8iwqA8L3NwYW4+PHNwYW4gc3R5bGU9ImNvbG9yOnJnYigyNTUsIDAsIDApIj48c3BhbiBzdHlsZT0iZm9udC1zaXplOjE0cHgiPsKgPC9zcGFuPuCnp+CnpiDgpp/gpr7gp58g4Ken4KemIOCmruCmv+CmqOCmv+CmnyDgpqrgp43gprDgpqTgpr8g4Ka24Kao4Ka/4Kas4Ka+4KawLCDgpqjgpr/gppwg4Kao4Ka/4KacIOCmrOCmvuCmuOCmviDgppXgprDgpr8g4Kaq4Kaw4Ka/4Ka34KeN4KaV4Ka+4KawKio8L3NwYW4+PHNwYW4gc3R5bGU9ImJhY2tncm91bmQtY29sb3I6cmdiKDI0NSwgMjQ1LCAyNDUpOyBmb250LWZhbWlseTprYWxwdXJ1c2hyZWd1bGFyOyBmb250LXNpemU6MTRweCI+4Kak4Ka/4KaoIOCmpuCmv+CmqOCnhyDgpo/gppUg4Kam4Ka/4KaoIOCmnOCmruCmviDgpqrgpr7gpqjgpr8g4Kar4KeH4Kay4KeHIOCmpuCmv+CmqCoq4Kau4Ka+4Ka44KeN4KaVIOCmhuCmruCmvuCmsCDgprjgp4HgprDgppXgp43gprfgpr4g4Ka44Kas4Ka+4KawPC9zcGFuPjxzcGFuIHN0eWxlPSJjb2xvcjpyZ2IoMjU1LCAwLCAwKSI+wqA8L3NwYW4+PHNwYW4gc3R5bGU9ImZvbnQtc2l6ZToxNHB4Ij48c3BhbiBzdHlsZT0iY29sb3I6I0ZGMDAwMCI+Kio8c3BhbiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjpyZ2IoMjQ1LCAyNDUsIDI0NSk7IGZvbnQtZmFtaWx5OmthbHB1cnVzaHJlZ3VsYXIiPuCmoeCmv+Cmj+CmqOCmuOCmv+CmuOCmv+CmsCDgp6vgpp/gpr8g4Kao4KaX4KawIOCmruCmvuCmpOCng+CmuOCmpuCmqOCnhyDgppXgp4vgpq3gpr/gpqEt4Ken4KevIOCmuOCmguCmleCnjeCmsOCmvuCmqOCnjeCmpCDgpp/gp4fgprLgpr/gpq7gp4fgpqHgpr/gprjgpr/gpqgg4Ka44KeH4Kas4Ka+IOCmquCnjeCmsOCmpuCmvuCmqOClpCDgpq7gpr7gpqTgp4Pgprjgpqbgpqjgp4fgprAg4Kao4Ka+4KauIOCmj+CmrOCmgiDgpp/gp4fgprLgpr/gpqvgp4vgpqgg4Kao4Kau4KeN4Kas4KawOiDgpqrgpr/gpo8t4KenIOCmqOCmvuCmsOCngCDgpq7gp4jgpqTgp43gprDgp4Ag4Kau4KaX4Kas4Ka+4Kac4Ka+4KawLeCnq+CnruCnqeCnp+CnquCnr+CnqeCnqTwvc3Bhbj48c3BhbiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjpyZ2IoMjQ1LCAyNDUsIDI0NSk7IGZvbnQtZmFtaWx5OmthbHB1cnVzaHJlZ3VsYXIiPizCoMKg4Kaq4Ka/4KaPLeCnqCDgpqjgpr7gprDgp4Ag4Kau4KeI4Kak4KeN4Kaw4KeAIOCmruCni+CmueCmvuCmruCnjeCmruCmpuCmquCngeCmsC3gp6bgp6fgp6ngp6fgp6fgp6/gp6rgp6zgp6rgp6ngp6g8L3NwYW4+PHNwYW4gc3R5bGU9ImJhY2tncm91bmQtY29sb3I6cmdiKDI0NSwgMjQ1LCAyNDUpOyBmb250LWZhbWlseTprYWxwdXJ1c2hyZWd1bGFyIj4sIOCmquCmv+Cmjy3gp6kg4Kao4Ka+4Kaw4KeAIOCmruCniOCmpOCnjeCmsOCngCDgpqLgpr7gppXgpr4g4KaG4Ka54Ka44Kao4Ka/4Kef4Ka+IOCmruCmv+CmtuCmqCwg4Kao4KeH4KaV4Ka/4Kas4Ka+4Kec4Ka/4Kaw4Kaf4KeH4KaVLCDgpq7gpr/gprDgpqrgp4HgprAt4Kem4Ken4Kep4Kem4Ken4Ker4Kev4Kes4Keu4Kep4KevPC9zcGFuPjxzcGFuIHN0eWxlPSJiYWNrZ3JvdW5kLWNvbG9yOnJnYigyNDUsIDI0NSwgMjQ1KTsgZm9udC1mYW1pbHk6a2FscHVydXNocmVndWxhciI+LMKg4Kaq4Ka/4KaPLeCnqiDgpqjgpr7gprDgp4Ag4Kau4KeI4Kak4KeN4Kaw4KeAIOCmquCmsuCnjeCmsuCmrOCngCwg4Kau4Ka/4Kaw4Kaq4KeB4KawLeCnpuCnp+CnreCnreCnpuCnreCnqOCnqOCnp+Cnr+Cnqjwvc3Bhbj48c3BhbiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjpyZ2IoMjQ1LCAyNDUsIDI0NSk7IGZvbnQtZmFtaWx5OmthbHB1cnVzaHJlZ3VsYXIiPizCoOCmquCmv+Cmjy3gp6sg4KaH4KaJ4Kaf4Ka/4Kaq4Ka/4KaP4Ka4IOCmieCmpOCnjeCmpOCmsOCmvi3gp6bgp6fgp6ngp6fgp6rgp63gp6zgp6zgp6vgp6rgp6s8L3NwYW4+PC9zcGFuPjwvc3Bhbj48c3BhbiBzdHlsZT0iY29sb3I6cmdiKDAsIDEyOCwgMCkiPsKgPC9zcGFuPjxzcGFuIHN0eWxlPSJjb2xvcjpyZ2IoMjU1LCAwLCAwKSI+Kio8L3NwYW4+PHNwYW4gc3R5bGU9ImNvbG9yOnJnYigwLCAxMjgsIDApIj7CoOCmuOCmruCnn+CmruCmpCDgppXgprDgp43gpqrgp4vgprDgp4fgprbgpqgg4KaV4KawIOCmquCmsOCmv+CmtuCni+CmpyDgppXgprDgp4cg4Kao4KaX4KawIOCmieCmqOCnjeCmqOCnn+CmqOCnhyDgprjgprngpr7gp5/gpqTgpr4g4KaV4Kaw4KeB4KaowqA8L3NwYW4+PHNwYW4gc3R5bGU9ImNvbG9yOnJnYigyNTUsIDAsIDApIj4qKsKgPC9zcGFuPjxzcGFuIHN0eWxlPSJjb2xvcjpyZ2IoMCwgMTI4LCAwKSI+4Kao4Ka/4Kaw4KeN4Kan4Ka+4Kaw4Ka/4KakIOCmoeCmvuCmuOCnjeCmn+CmrOCmv+CmqC/gprLgpr/gpp/gpr7gprDgpqzgpr/gpqgv4KaV4Kao4KeN4Kaf4KeH4KaH4Kao4Ka+4KawIOCmm+CmvuCnnOCmviDgpq/gpqTgp43gprDgpqTgpqTgp43gprAg4Kau4Kef4Kay4Ka+L+CmhuCmrOCmsOCnjeCmnOCmqOCmviDgpqvgp4fgprLgpqzgp4fgpqgg4Kao4Ka+wqA8L3NwYW4+PHNwYW4gc3R5bGU9ImNvbG9yOnJnYigyNTUsIDAsIDApIj4qKjwvc3Bhbj48c3BhbiBzdHlsZT0iY29sb3I6cmdiKDAsIDEyOCwgMCkiPsKg4Kao4Ka/4Kaw4KeN4Kau4Ka+4KaoIOCmuOCmvuCmruCml+CnjeCmsOCngC/gprDgpr7gpqzgpr/gprYv4Kau4Ka+4Kaf4Ka/IOCmh+CmpOCnjeCmr+CmvuCmpuCmvyDgprDgpr7gprjgp43gpqTgpr4v4Kar4KeB4Kaf4Kaq4Ka+4Kak4KeHIOCmsOCnh+CmluCnhyDgpo/gprLgpr7gppXgpr4g4KaF4Kaq4Kaw4Ka/4Kaa4KeN4Kab4Kao4KeN4KaoIOCmkyDgppzgpqjgprjgpr7gpqfgpr7gprDgpqjgp4fgprAg4Kaa4Kay4Ka+4Kaa4Kay4KeHIOCmheCmuOCngeCmrOCmv+Cmp+CmviDgprjgp4Pgprfgp43gpp/gpr8g4KaV4Kaw4Kas4KeH4KaoIOCmqOCmvsKgPC9zcGFuPjxzcGFuIHN0eWxlPSJjb2xvcjpyZ2IoMjU1LCAwLCAwKSI+Kio8L3NwYW4+PHNwYW4gc3R5bGU9ImNvbG9yOnJnYigwLCAxMjgsIDApIj7CoOCmqOCmsOCnjeCmpuCmruCmvuCnnyDgpobgpqzgprDgp43gppzgpqjgpr4v4Kau4Ka+4Kaf4Ka/L+CmrOCmvuCmsuCngSDgpofgpqTgp43gpq/gpr7gpqbgpr8g4Kar4KeH4Kay4Kas4KeH4KaoIOCmqOCmvsKgPC9zcGFuPjxzcGFuIHN0eWxlPSJjb2xvcjpyZ2IoMjU1LCAwLCAwKSI+Kio8L3NwYW4+PHNwYW4gc3R5bGU9ImNvbG9yOnJnYigwLCAxMjgsIDApIj7CoOCmp+CngeCmruCmquCmvuCmqCDgppMg4Kak4Ka+4Kau4Ka+4KaVIOCmuOCnjeCmrOCmvuCmuOCnjeCmpeCnjeCmr+Cnh+CmsCDgppzgpqjgp43gpq8g4Kau4Ka+4Kaw4Ka+4Kak4KeN4Kau4KaVIOCmleCnjeCmt+CmpOCmv+CmleCmsCwg4Kan4KeB4Kau4Kaq4Ka+4KaoIOCmkyDgpqTgpr7gpq7gpr7gppUg4Kab4Ka+4Kec4KeB4KaoLCDgprjgp4Hgprjgp43gpqUg4Kal4Ka+4KaV4KeB4KaowqA8L3NwYW4+PHNwYW4gc3R5bGU9ImNvbG9yOnJnYigyNTUsIDAsIDApIj4qKjwvc3Bhbj48c3BhbiBzdHlsZT0iY29sb3I6cmdiKDAsIDEyOCwgMCkiPsKg4Kau4Ka+4Kam4KaVIOCmuOCnh+CmrOCmqCDgpobgpqrgpqjgpr7gprAsIOCmhuCmquCmqOCmvuCmsCDgpqrgprDgpr/gpqzgpr7gprAg4KaTIOCmuOCmruCmvuCmnOCnh+CmsCDgppXgp43gprfgpqTgpr8g4KaV4Kaw4KeHLCDgpq7gpr7gpqbgppXgppXgp4cg4Kao4Ka+IOCmrOCmsuCmvyDgppMg4Kau4Ka+4Kam4KaV4Kau4KeB4KaV4KeN4KakIOCmuOCmruCmvuCmnCDgppfgp5zgpr/gpaTCoDwvc3Bhbj48L3A+Cgo8cCBzdHlsZT0idGV4dC1hbGlnbjpqdXN0aWZ5Ij7CoDwvcD4KPC9tYXJxdWVlPg=="> --}}
-                                <marquee scrollamount="4"
+                                <marquee scrollamount="7"
                                     style="font-family: 'Kalpurush', sans-serif; font-size: 16px;    padding-top: 10px;">
                                     <i class="fas fa-play"></i> &nbsp; আপনার সন্তানের জন্ম নিবন্ধন সম্পন্ন
                                     করুন
@@ -1470,37 +1507,78 @@
                     <div data-widget_type="widget" data-widget_name="BlockWidget" data-widget_content_type="blocks"
                         data-widget_item="6922d3d2dbfbab28ce041c82" class="widget block-widget">
                         <div class="block-widget-container">
-                            <div class="block-widget-content"> <rt-renderer
-                                    encoded-content="PG1hcnF1ZWUgY2xhc3M9ImN1c3RvbS1tYXJxdWVlIiBkaXJlY3Rpb249ImxlZnQiIHNjcm9sbGFtb3VudD0iNyIgeG9ubW91c2VvdmVyPSJ0aGlzLnN0b3AoKSIgeG9ubW91c2VvdXQ9InRoaXMuc3RhcnQoKSI+PGg0PjxzcGFuIHN0eWxlPSJjb2xvcjpyZ2IoMjU1LDAsMCkiPioqPC9zcGFuPjxhIGhyZWY9Imh0dHBzOi8vZG5jYy5nb3YuYmQvcGFnZXMvc3RhdGljLXBhZ2VzL3ZpdGFtaW4tYS1wbHVzLWNhbXAtY2VudGVycy05b2dqenMtNmE0MDk4MDcwZjUzYTZmNjdmNGMyMDQ3Ij48c3BhbiBzdHlsZT0iY29sb3I6cmdiKDI1NSwwLDApIj7gpq3gpr/gpp/gpr7gpq7gpr/gpqgg4oCY4KaP4oCZIOCmquCnjeCmsuCmvuCmuCDgppXgp43gpq/gpr7gpq7gp43gpqrgp4fgpocg4KaV4KeH4Kao4KeN4Kam4KeN4Kaw4Ka44Kau4KeC4Ka5PC9zcGFuPjwvYT48c3BhbiBzdHlsZT0iY29sb3I6cmdiKDI1NSwwLDApO2ZvbnQtc2l6ZToxNnB4Ij4gPC9zcGFuPjxzcGFuIHN0eWxlPSJjb2xvcjpyZ2IoMCwxMjgsMCk7Zm9udC1zaXplOjE2cHgiPioqPC9zcGFuPjxhIHN0eWxlPSJmb250LXNpemU6MTRweCIgaHJlZj0iL3BhZ2VzL3N0YXRpYy1wYWdlcy82OTIyZTA3YTkzM2ViNjU1NjllMjc0MDYiPjxzcGFuIHN0eWxlPSJiYWNrZ3JvdW5kLWNvbG9yOnJnYigwLDI1NSwwKTtjb2xvcjpyZ2IoMjU1LDAsMCkiPjxzdHJvbmc+4Kai4Ka+4KaV4Ka+IOCmieCmpOCnjeCmpOCmsCDgprjgpr/gpp/gpr8g4KaV4Kaw4KeN4Kaq4KeL4Kaw4KeH4Ka24Kao4KeH4KawIOCmrOCmv+CmreCmv+CmqOCnjeCmqCDgpoXgpp7gp43gpprgprIvIOCmk+Cnn+CmvuCmsOCnjeCmoeCnh+CmsCDgpqbgpr7gp5/gpr/gpqTgp43gpqzgpqrgp43gprDgpr7gpqrgp43gpqQg4KaV4Kaw4KeN4Kau4KaV4Kaw4KeN4Kak4Ka+4KawICjgprjgp43gpqzgpr7gprjgp43gpqXgp43gpq8g4KaTIOCmrOCmsOCnjeCmnOCnjeCmryDgpqzgpr/gpq3gpr7gppcpIOCmpOCmvuCmsuCmv+CmleCmvjwvc3Ryb25nPjwvc3Bhbj48L2E+PGEgaHJlZj0iL3BhZ2VzL3N0YXRpYy1wYWdlcy82OTIyZTA3YTkzM2ViNjU1NjllMjc0MDYiPjxzcGFuIHN0eWxlPSJiYWNrZ3JvdW5kLWNvbG9yOnJnYigwLDI1NSwwKTtjb2xvcjpyZ2IoMjU1LDAsMCk7Zm9udC1zaXplOjE0cHgiPjxzcGFuIGNsYXNzPSJtYXJrZXIiPjxzdHJvbmc+wqA8L3N0cm9uZz48L3NwYW4+PC9zcGFuPjwvYT48c3BhbiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjpyZ2IoMjU1LDIxNSwwKTtmb250LXNpemU6MTRweCI+PHNwYW4gY2xhc3M9Im1hcmtlciI+PHN0cm9uZz4qKsKgPC9zdHJvbmc+PC9zcGFuPjwvc3Bhbj48c3BhbiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjpyZ2IoMjU1LDIxNSwwKSI+PHN0cm9uZz7gpoXgpqbgp43gpq8g4Kem4KepIOCmhuCml+CmuOCnjeCmnyDgp6jgp6bgp6jgp6wg4KaW4KeN4Kaw4Ka/4KaDIOCmpOCmvuCmsOCmv+CmluCnhyDgpqLgpr7gppXgpr4g4KaJ4Kak4KeN4Kak4KawIOCmuOCmv+Cmn+CmvyDgppXgprDgp43gpqrgp4vgprDgp4fgprbgpqgg4KaG4Kak4Ka+4Kan4KeA4KaoIOCmj+CmsuCmvuCmleCmvuCnnyDgpqzgprDgp43gppzgp43gpq8g4KaF4Kaq4Ka44Ka+4Kaw4Kaj4KeH4KawIOCmquCmsOCmv+CmruCmvuCmoyAtIOCnqSzgp67gp6jgp68g4Kau4KeH4Kaf4KeN4Kaw4Ka/4KaVIOCmn+CmqDwvc3Ryb25nPjwvc3Bhbj48c3BhbiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjpyZ2IoMjU1LDIxNSwwKTtmb250LXNpemU6MTRweCI+PHNwYW4gY2xhc3M9Im1hcmtlciI+PHN0cm9uZz7CoDwvc3Ryb25nPjwvc3Bhbj48L3NwYW4+PGEgc3R5bGU9ImZvbnQtc2l6ZToxNHB4IiBocmVmPSIvcGFnZXMvc3RhdGljLXBhZ2VzLzY5MjJlMDdhOTMzZWI2NTU2OWUyNzQwNiI+PHNwYW4gc3R5bGU9ImNvbG9yOnJnYigyNTUsMCwwKSI+PHN0cm9uZz4qKjwvc3Ryb25nPjwvc3Bhbj48L2E+PC9oND48L21hcnF1ZWU+">
-                                    <marquee class="custom-marquee" direction="left" scrollamount="7"
+                            <div class="block-widget-content"> 
+                                <rt-renderer
+                                    {{-- encoded-content="PG1hcnF1ZWUgY2xhc3M9ImN1c3RvbS1tYXJxdWVlIiBkaX
+                                    JlY3Rpb249ImxlZnQiIHNjcm9sbGFtb3VudD0iNyIgeG9ubW91c2VvdmVyPSJ0aG
+                                    lzLnN0b3AoKSIgeG9ubW91c2VvdXQ9InRoaXMuc3RhcnQoKSI+PGg0PjxzcGFuIHN
+                                    0eWxlPSJjb2xvcjpyZ2IoMjU1LDAsMCkiPioqPC9zcGFuPjxhIGhyZWY9Imh0dHBzO
+                                    i8vZG5jYy5nb3YuYmQvcGFnZXMvc3RhdGljLXBhZ2VzL3ZpdGFtaW4tYS1wbHVzLWN
+                                    hbXAtY2VudGVycy05b2dqenMtNmE0MDk4MDcwZjUzYTZmNjdmNGMyMDQ3Ij48c3Bhbi
+                                    
+                                    BzdHlsZT0iY29sb3I6cmdiKDI1NSwwLDApIj7gpq3gpr/gpp/gpr7gpq7gpr/gpqgg4o
+                                    CY4KaP4oCZIOCmquCnjeCmsuCmvuCmuCDgppXgp43gpq/gpr7gpq7gp43gpqrgp4fgpoc
+                                    g4KaV4KeH4Kao4KeN4Kam4KeN4Kaw4Ka44Kau4KeC4Ka5PC9zcGFuPjwvYT48c3BhbiBz
+                                    dHlsZT0iY29sb3I6cmdiKDI1NSwwLDApO2ZvbnQtc2l6ZToxNnB4Ij4gPC9zcGFuPjxzcG
+                                    FuIHN0eWxlPSJjb2xvcjpyZ2IoMCwxMjgsMCk7Zm9udC1zaXplOjE2cHgiPioqPC9zcGFuP
+                                    jxhIHN0eWxlPSJmb250LXNpemU6MTRweCIgaHJlZj0iL3BhZ2VzL3N0YXRpYy1wYWdlcy82
+                                    OTIyZTA3YTkzM2ViNjU1NjllMjc0MDYiPjxzcGFuIHN0eWxlPSJiYWNrZ3JvdW5kLWNvbG9
+                                    yOnJnYigwLDI1NSwwKTtjb2xvcjpyZ2IoMjU1LDAsMCkiPjxzdHJvbmc+4Kai4Ka+4KaV4K
+                                    a+IOCmieCmpOCnjeCmpOCmsCDgprjgpr/gpp/gpr8g4KaV4Kaw4KeN4Kaq4KeL4Kaw4KeH4
+                                    Ka24Kao4KeH4KawIOCmrOCmv+CmreCmv+CmqOCnjeCmqCDgpoXgpp7gp43gpprgprIvIOCm
+                                    k+Cnn+CmvuCmsOCnjeCmoeCnh+CmsCDgpqbgpr7gp5/gpr/gpqTgp43gpqzgpqrgp43gprD
+                                    gpr7gpqrgp43gpqQg4KaV4Kaw4KeN4Kau4KaV4Kaw4KeN4Kak4Ka+4KawICjgprjgp43gpq
+                                    zgpr7gprjgp43gpqXgp43gpq8g4KaTIOCmrOCmsOCnjeCmnOCnjeCmryDgpqzgpr/gpq3gp
+                                    r7gppcpIOCmpOCmvuCmsuCmv+CmleCmvjwvc3Ryb25nPjwvc3Bhbj48L2E+PGEgaHJlZj0i
+                                    L3BhZ2VzL3N0YXRpYy1wYWdlcy82OTIyZTA3YTkzM2ViNjU1NjllMjc0MDYiPjxzcGFuIHN
+                                    0eWxlPSJiYWNrZ3JvdW5kLWNvbG9yOnJnYigwLDI1NSwwKTtjb2xvcjpyZ2IoMjU1LDAsMC
+                                    k7Zm9udC1zaXplOjE0cHgiPjxzcGFuIGNsYXNzPSJtYXJrZXIiPjxzdHJvbmc+wqA8L3N0c
+                                    m9uZz48L3NwYW4+PC9zcGFuPjwvYT48c3BhbiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjpy
+                                    Z2IoMjU1LDIxNSwwKTtmb250LXNpemU6MTRweCI+PHNwYW4gY2xhc3M9Im1hcmtlciI+PHN
+                                    0cm9uZz4qKsKgPC9zdHJvbmc+PC9zcGFuPjwvc3Bhbj48c3BhbiBzdHlsZT0iYmFja2dyb3
+                                    VuZC1jb2xvcjpyZ2IoMjU1LDIxNSwwKSI+PHN0cm9uZz7gpoXgpqbgp43gpq8g4Kem4KepI
+                                    OCmhuCml+CmuOCnjeCmnyDgp6jgp6bgp6jgp6wg4KaW4KeN4Kaw4Ka/4KaDIOCmpOCmvuCm
+                                    sOCmv+CmluCnhyDgpqLgpr7gppXgpr4g4KaJ4Kak4KeN4Kak4KawIOCmuOCmv+Cmn+CmvyD
+                                    gppXgprDgp43gpqrgp4vgprDgp4fgprbgpqgg4KaG4Kak4Ka+4Kan4KeA4KaoIOCmj+Cmsu
+                                    CmvuCmleCmvuCnnyDgpqzgprDgp43gppzgp43gpq8g4KaF4Kaq4Ka44Ka+4Kaw4Kaj4KeH4
+                                    KawIOCmquCmsOCmv+CmruCmvuCmoyAtIOCnqSzgp67gp6jgp68g4Kau4KeH4Kaf4KeN4Kaw
+                                    4Ka/4KaVIOCmn+CmqDwvc3Ryb25nPjwvc3Bhbj48c3BhbiBzdHlsZT0iYmFja2dyb3VuZC1
+                                    jb2xvcjpyZ2IoMjU1LDIxNSwwKTtmb250LXNpemU6MTRweCI+PHNwYW4gY2xhc3M9Im1hcm
+                                    tlciI+PHN0cm9uZz7CoDwvc3Ryb25nPjwvc3Bhbj48L3NwYW4+PGEgc3R5bGU9ImZvbnQtc
+                                    2l6ZToxNHB4IiBocmVmPSIvcGFnZXMvc3RhdGljLXBhZ2VzLzY5MjJlMDdhOTMzZWI2NTU2
+                                    OWUyNzQwNiI+PHNwYW4gc3R5bGU9ImNvbG9yOnJnYigyNTUsMCwwKSI+PHN0cm9uZz4qKjw
+                                    vc3Ryb25nPjwvc3Bhbj48L2E+PC9oND48L21hcnF1ZWU+" --}}
+                                    >
+                                    
+                                    <marquee class="custom-marquee" direction="left" scrollamount="5"
                                         xonmouseover="this.stop()" xonmouseout="this.start()">
                                         <h4><span style="color:rgb(255,0,0)">**</span><a
                                                 href="pages/static-pages/vitamin-a-plus-camp-centers-9ogjzs-6a4098070f53a6f67f4c2047.html"><span
-                                                    style="color:rgb(255,0,0)">ভিটামিন ‘এ’ প্লাস ক্যাম্পেই
-                                                    কেন্দ্রসমূহ</span></a><span
+                                                    style="color:rgb(255,0,0)"> উন্নয়নমূলক প্রকল্প </span></a><span
                                                 style="color:rgb(255,0,0);font-size:16px"> </span><span
                                                 style="color:rgb(0,128,0);font-size:16px">**</span><a
                                                 style="font-size:14px"
                                                 href="pages/static-pages/6922e07a933eb65569e27406.html"><span
-                                                    style="background-color:rgb(0,255,0);color:rgb(255,0,0)"><strong>ঢাকা
-                                                        উত্তর সিটি কর্পোরেশনের বিভিন্ন অঞ্চল/ ওয়ার্ডের দায়িত্বপ্রাপ্ত
-                                                        কর্মকর্তার (স্বাস্থ্য ও বর্জ্য বিভাগ)
-                                                        তালিকা</strong></span></a><a
+                                                    style="background-color:rgb(0,255,0);color:rgb(255,0,0)"><strong>বিশুদ্ধ পানি ও জল প্রকল্প ||বায়োগ্যাস প্রকল্প
+||সৌর বিদ্যুৎ প্রকল্প
+||আধুনিক পয়ঃনিষ্কাশন প্রকল্প
+||ফায়ার হাইড্রেন্ট প্রকল্প
+||বর্জ্য ব্যবস্থাপনা প্রকল্প
+||ভূগর্ভস্থ বিদ্যুৎ ও ইন্টারনেট কেবল প্রকল্প</strong></span></a><a
                                                 href="pages/static-pages/6922e07a933eb65569e27406.html"><span
                                                     style="background-color:rgb(0,255,0);color:rgb(255,0,0);font-size:14px"><span
                                                         class="marker"><strong> </strong></span></span></a><span
                                                 style="background-color:rgb(255,215,0);font-size:14px"><span
                                                     class="marker"><strong>** </strong></span></span><span
-                                                style="background-color:rgb(255,215,0)"><strong>অদ্য ০৩ আগস্ট ২০২৬
-                                                    খ্রিঃ তারিখে ঢাকা উত্তর সিটি কর্পোরেশন আতাধীন এলাকায় বর্জ্য অপসারণের
-                                                    পরিমাণ - ৩,৮২৯ মেট্রিক টন</strong></span><span
+                                                style="background-color:rgb(255,215,0)"><strong></strong></span><span
                                                 style="background-color:rgb(255,215,0);font-size:14px"><span
                                                     class="marker"><strong> </strong></span></span><a
                                                 style="font-size:14px"
                                                 href="pages/static-pages/6922e07a933eb65569e27406.html"><span
                                                     style="color:rgb(255,0,0)"><strong>**</strong></span></a></h4>
                                     </marquee>
-                                </rt-renderer> </div>
+                                </rt-renderer> 
+                            </div>
                         </div>
                     </div>
                     <section data-widget_type="widget" data-widget_name="NoticeNewsCardWidget"
@@ -2473,7 +2551,7 @@
                     </div>
                 </div>
             </div>
-            <div class="right">
+            {{-- <div class="right">
                 <div data-section_type="right" class="droppable">
                     <div data-widget_type="widget" data-widget_name="PersonCardStackWidget"
                         class="widget person-card-stack-widget">
@@ -2966,7 +3044,7 @@
                         }];
                     </script>
                 </div>
-            </div>
+            </div> --}}
         </div>
         <div class="footer">
             <div data-section_type="footer" class="droppable">
