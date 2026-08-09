@@ -6,6 +6,10 @@ use App\Http\Controllers\PageController;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
-Route::get('/form', [PageController::class, 'form'])->name('form');
+Route::get('/fishermanform', [PageController::class, 'fishermanform'])->name('fishermanform');
+Route::get('/farmerform', [PageController::class, 'farmerform'])->name('farmerform');
+Route::get('/marketform', [PageController::class, 'marketform'])->name('marketform');
+Route::get('/industrialform', [PageController::class, 'industrialform'])->name('industrialform');
+Route::get('/cowboyform', [PageController::class, 'cowboyform'])->name('cowboyform');

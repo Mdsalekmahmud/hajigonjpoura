@@ -1,0 +1,8 @@
+;((window,document)=>{ // YoutubeCardWidget
+window.openYoutubeModal=e=>{e.preventDefault(),e.stopPropagation(),console.log("TARG >>",[e,e.target]);var t=e.target.innerText,a=e.target.getAttribute("details"),e=e.target.getAttribute("value");document.body.innerHTML+=`<div class="youtube-card-widget-modal" onclick="arguments[0].target.remove()">
+    <div class="youtube-modal-container" onclick="arguments[0].stopPropagation()">
+        <div><a href="${a}">${t}</a></div>
+        <iframe frameborder="0" src="https://www.youtube.com/embed/${e}"></iframe>
+    </div>
+</div>`};
+})(_window,_document);
