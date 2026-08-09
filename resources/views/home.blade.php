@@ -833,6 +833,7 @@
                         <!-- যাচাই করুন (সরাসরি লিংক) -->
                         <li class="nav-item">
                             <a class="nav-link fw-semibold" href="https://hajigonjpoura.org/verify">
+                                <i class="bi bi-check-circle me-1"></i>
                                 <span data-bn>যাচাই করুন</span>
                                 <span data-en>Verify</span>
                             </a>
