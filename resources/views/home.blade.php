@@ -1115,8 +1115,8 @@
             <div class="mb-4">
                 <h2 class="fw-bold" data-bn>সিটি অপারেশন</h2>
                 <h2 class="fw-bold" data-en>City Operations</h2>
-                <p class="text-muted" data-bn>ঢাকা উত্তরের দৈনন্দিন নাগরিক পরিষেবা কার্যক্রম।</p>
-                <p class="text-muted" data-en>Everyday civic operations across Dhaka North.</p>
+                <p class="text-muted" data-bn>হাজীগঞ্জ পৌরসভা দৈনন্দিন নাগরিক পরিষেবা কার্যক্রম।</p>
+                <p class="text-muted" data-en>Everyday civic operations across Hajiganj.</p>
             </div>
             <div class="row g-3" id="civic-grid"></div>
         </div>
@@ -1202,12 +1202,12 @@
         <div class="container">
             <div class="row g-4 align-items-center">
                 <div class="col-lg-7">
-                    <h2 class="fw-bold" data-bn>ঢাকা উত্তর সিটি কর্পোরেশন সম্পর্কে</h2>
-                    <h2 class="fw-bold" data-en>About DNCC</h2>
-                    <p class="text-muted" data-bn>ঢাকা উত্তর সিটি কর্পোরেশন রাজধানীর উত্তরাংশের নাগরিক সেবা, নগর
+                    <h2 class="fw-bold" data-bn>হাজীগঞ্জ পৌরসভা সম্পর্কে</h2>
+                    <h2 class="fw-bold" data-en>About HPM</h2>
+                    <p class="text-muted" data-bn>হাজীগঞ্জ পৌরসভা। হাজীগঞ্জ নাগরিক সেবা, নগর
                         পরিকল্পনা ও স্থানীয় সরকার কার্যক্রম পরিচালনা করে। সংস্থাটি জোন ও ওয়ার্ড ভিত্তিক প্রশাসনিক
                         কাঠামোর মাধ্যমে নাগরিকদের কাছাকাছি সেবা পৌঁছে দিতে কাজ করছে।</p>
-                    <p class="text-muted" data-en>Dhaka North City Corporation administers civic services, urban
+                    <p class="text-muted" data-en>Hajiganj Poura Municipality Hajiganj civic services, urban
                         planning and local government functions across the northern part of the capital, organised
                         through a zone- and ward-based administrative structure to bring services closer to citizens.
                     </p>
@@ -1249,8 +1249,8 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="fw-bold fs-5 text-white" data-bn>ঢাকা উত্তর সিটি কর্পোরেশন</div>
-                    <div class="fw-bold fs-5 text-white" data-en>Dhaka North City Corporation</div>
+                    <div class="fw-bold fs-5 text-white" data-bn>হাজীগঞ্জ পৌরসভা</div>
+                    <div class="fw-bold fs-5 text-white" data-en>Hajiganj Poura Municipality</div>
                     <p class="mt-2" data-bn>নগর ভবন, গুলশান সেন্টার পয়েন্ট, প্লট ২৩–২৬, রোড ৪৬, গুলশান-২, ঢাকা-১২১২
                     </p>
                     <p data-en>Nagar Bhaban, Gulshan Center Point, Plot 23–26, Road 46, Gulshan-2, Dhaka-1212</p>
