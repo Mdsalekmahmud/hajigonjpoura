@@ -708,7 +708,7 @@
                                         <li>
                                             <a class="dropdown-item" href="#">
                                                 <i class="bi bi-droplet me-2 text-success"></i>
-                                                <span data-bn>বিশুদ্ধ পানি ও জল প্রকল্প</span>
+                                                <span data-bn>বিশুদ্ধ পানীয় জল প্রকল্প</span>
                                                 <span data-en>Clean Water &amp; Water Project</span>
                                             </a>
                                         </li>
